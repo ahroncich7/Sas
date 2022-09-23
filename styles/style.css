@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700&display=swap');
+
+
+
+:root {
+    --color1: #FEFEFF;
+    --color2: #EFEFEF;
+    --color3: #1D1A1B;
+    --color4: #475046b9;
+    --color5: #81776A;
+    --color6: #81776a91;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    color: var(--color3);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body {
+    background-color: var(--color2);
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(var(--color6), var(--color6)), url(/public/images/fondo1-edit.png);
+    background-position: top;
+    background-size: cover;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--color1);
+    font-weight: 200;
+}
+
+.hero h3 {
+    color: var(--color1);
+}
+
+
+/* CONTAINERS STYLES */
+
+.container {
+    margin: auto;
+    min-height: 80vh;
+    padding: 50px 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color5);
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.container>* {
+    max-width: 1080px;
+}
+
+
+/* Sections */
+
+/* LAST UPLOADS*/
+
+
+.products-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+
+}
+
+
+.product-card-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.a-pedido {
+    text-decoration: none;
+    background-color: var(--color3);
+    color: var(--color1);
+    padding: 14px 28px;
+}
+
+
+/*ABOUT ME*/
+
+.about-me {
+    height: 100vh;
+    max-width: 100vw;
+    background-image: url(/public/images/fondo2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.background-about-me {
+    background-color: var(--color1);
+    border-radius: 6px;
+    padding: 50px;
+}
+
+.about-me-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/*PRODUCTS*/
+
+/*FILTER*/
+
+
+.filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 16px;
+    flex-wrap: wrap;
+    gap: 2em;
+    border: 1px solid var(--color3);
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.category-container  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category-container  label {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.checkbox { 
+    width: 1em;
+    height: 1em;
+    background-color: #eee;
+    border: 1px solid var(--color3);
+    text-align: center;
+}
+
+.checkbox.active::after{
+    color: var(--color3);
+    content: "✓";
+}
+
+
+/*SIZES*/
+
+.sizes{
+    gap: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--color4);
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.sizes-card {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small .img-card{
+    height: 40%;
+}
+
+.medium .img-card{
+    height: 50%;
+}
+
+.large .img-card{
+    height: 60%;
+}
+
+.size-desc{
+    justify-content: end;
+}
+
+.sizes img {
+    object-fit: contain;
+    height: 100%;
+}
+
+
+
+
+/*ART*/
+
+.art-row{
+    gap: 20px;
+    flex-wrap: nowrap;
+    max-width: 100vw;
+}
+
+.art-card {
+    max-width: 400px;
+    background-color: var(--color4);
+}
+
+.art-card *{
+    color: var(--color1);
+}
+
+
+/*FOOTER*/
+
+.footer-container {
+    min-height: 15vh;
+}
+
+.footer-container a:visited {
+    color: inherit
+}

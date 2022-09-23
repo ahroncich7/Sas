@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./styles/style.css">
     <title>SAS</title>
 </head>
@@ -19,52 +20,207 @@
     </div>
 
     <section class="container last-uploads">
-        <h2>NEW IN</h2>
+        <h2>EN STOCK</h2>
         <div class="products-row last-uploads-row">
-
+            <div class="product-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
         </div>
-        <button class="view-all-btn">
-            VIEW ALL
-        </button>
+
+        <a href="#pedido" class="a-pedido">
+            A PEDIDO
+        </a>
     </section>
 
     <section class="container about-me">
-        <div class="backgorund background-about">
-            <div class="about-card">
-                <h3>Sobre Mi</h3>
-                <pa class="about-desc">
+        <div class="background-about-me">
+            <div class="about-me-card">
+                <h2>Sobre Mi</h2>
+                <p class="about-desc">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam velit necessitatibus
                     dignissimos, deserunt repudiandae quibusdam deleniti libero, quia, sapiente nesciunt amet? Animi
                     minus ipsum quos debitis voluptatum nulla expedita non!
-                    </p>
+                    sit amet consectetur adipisicing elit. Laboriosam velit necessitatibus
+                    dignissimos, deserunt repudiandae quibusdam
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="container products">
-        <h2>Productos</h2>
-        <div class="fitler">
-            <select name="filtro" id="">Filtrar
 
-            </select>
-            <select name="sort" id="">Ordenar
+    <!-- <option value=radio"tazas">Tazas</option>
+                    <option value="platos">Platos</option>
+                    <option value="cuencos">Cuencos</option>
+                    <option value="bandejas">Bandejas</option>
+                    <option value="ensaladeras">Ensaladeras</option>
+                    <option value="floreros">Floreros</option>
+                    <option value="teteras">Teteras</option>
+                    <option value="objetos">Objetos</option> -->
 
-            </select>
+    <section id="pedido" class="container products">
+        <h2>A PEDIDO</h2>
+        <div class="filter">
+            <div class="category-container">
+                <form action="">
+
+                    <label for="cat-tazas">Tazas
+                        <input type="radio" id="cat-tazas" name="tazas" value="tazas">
+                        </input>
+                        <div class="checkbox"></div>
+                    </label>
+                    <label for="cat-platos">Platos
+                        <input type="radio" id="cat-platos" name="platos" value="platos">
+                        </input>
+                        <div class="checkbox"></div>
+                    </label>
+                    <label for="cat-cuencos">Cuencos
+                        <input type="radio" id="cat-cuencos" name="cuencos" value="cuencos">
+                        </input>
+                        <div class="checkbox"></div>
+                    </label>
+                    <label for="cat-bandejas">Bandejas
+                        <input type="radio" id="cat-bandejas" name="bandejas" value="bandejas">
+                        </input>
+                        <div class="checkbox"></div>
+                    </label>
+                    <label for="cat-ensaladeras">Ensaladeras
+                        <input type="radio" id="cat-ensaladeras" name="ensaladeras" value="ensaladeras">
+                        </input>
+                        <div class="checkbox"></div>
+                    </label>
+                    <label for="cat-floreros">Floreros
+                        <input type="radio" id="cat-floreros" name="floreros" value="floreros">
+                        </input>
+                        <div class="checkbox"></div>
+                    </label>
+                    <label for="cat-teteras">Teteras
+                        <input type="radio" id="cat-teteras" name="teteras" value="teteras">
+                        </input>
+                        <div class="checkbox"></div>
+                    </label>
+                    <label for="cat-objetos">Objetos
+                        <input type="radio" id="cat-objetos" name="objetos" value="objetos">
+                        </input>
+                        <div class="checkbox"></div>
+                    </label>
+                </form>
+            </div>
         </div>
-        <div class="products-row products-list">
 
+        <div class="sizes">
+            <div class="sizes-card small">
+                <div class="img-card">
+                    <img src="public/images/tazas.png" alt="">
+                </div>
+                <div class="size-desc">
+                    <h4>200 ml</h4>
+                    <span>$1200</span>
+                </div>
+            </div>
+            <div class="sizes-card medium">
+                <div class="img-card">
+                    <img src="public/images/tazas.png" alt="">
+                </div>
+                <div class="size-desc">
+                    <h4>200 ml</h4>
+                    <span>$1200</span>
+                </div>
+            </div>
+            <div class="sizes-card large">
+                <div class="img-card">
+                    <img src="public/images/tazas.png" alt="">
+                </div>
+                <div class="size-desc">
+                    <h4>200 ml</h4>
+                    <span>$1200</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-row products-list">
+            <div class="product-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="art">
+    <section class="container art">
         <h2>Obra</h2>
-        <div class="work-images">
+        <div class="products-row art-row">
+            <div class="product-card art-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
+            <div class="product-card art-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
+            <div class="product-card art-card">
+                <img src="./public/images/taza-editada.png" alt="">
+                <div class="product-card-desc">
+                    <h3 class="product-title">Lorem Ipsum Dolo</h3>
+                    <span class="product-price">$3000</span>
+                </div>
+            </div>
 
         </div>
     </section>
 
     <footer>
-        
+        <div class="container footer-container">
+            <h3>Developed By: <a href="https://www.linkedin.com/in/alejandro-hroncich/" target="_blank">
+                    <span> HALADWIN </span></a>
+            </h3>
+        </div>
     </footer>
 
 
