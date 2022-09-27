@@ -23,14 +23,10 @@ hr {
 }
 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
+*{
     color: var(--color3);
 }
+
 
 a {
     text-decoration: none;
@@ -47,7 +43,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(var(--color6), var(--color6)), url(/public/images/fondo1-edit.png);
+    background-image: linear-gradient(var(--color6), var(--color6)), url(../public/images/fondo1-edit.png);
     background-position: top;
     background-size: cover;
 }
@@ -120,11 +116,12 @@ body {
 /*ABOUT ME*/
 
 .about-me {
-    height: 100vh;
+    min-height: 100vh;
     max-width: 100vw;
-    background-image: url(/public/images/fondo2.png);
+    background-image: url(../public/images/fondo2.png);
     background-position: center;
     background-size: cover;
+    padding: 20px 40px;
 }
 
 .background-about-me {
@@ -277,7 +274,7 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 1em ;
+    margin: 20px 0;
 }
 
 .footer-container a:visited {
@@ -311,6 +308,8 @@ input {
         gap: 20px;
         padding: 2em;
     }
+
+
     
 }
 
@@ -321,6 +320,10 @@ input {
 
     .footer-container {
         font-size: 12px;
+    }
+
+    .background-about-me{
+        padding: 25px;
     }
     
 }
