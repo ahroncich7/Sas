@@ -1,3 +1,6 @@
+import { updateProductsSection } from "./productsCards.js";
+// updateProductsSection();
+
 let checkboxes = document.querySelectorAll(".checkbox");
 
 
@@ -9,13 +12,13 @@ checkboxes.forEach((checkbox) => {
 function setWhenClickedCheckbox(e) {
     e.preventDefault();
     let checkbox = e.target;
-    resetActiveClassToCheckboxes(checkboxes);
-    setActiveToCheckbox(checkbox);
-    launchFilter();
+    resetActiveStatusInCheckboxes(checkboxes);
+    setActiveStatusInCheckbox(checkbox);
+    updateProductsSection();
 }
 
 
-function resetActiveClassToCheckboxes(checkboxes) {
+function resetActiveStatusInCheckboxes(checkboxes) {
     checkboxes.forEach(checkbox => {
         try { checkbox.classList.remove("active") }
         catch { }
@@ -23,10 +26,6 @@ function resetActiveClassToCheckboxes(checkboxes) {
 }
 
 
-function setActiveToCheckbox(checkbox){
+function setActiveStatusInCheckbox(checkbox){
     checkbox.classList.add("active")
-}
-
-function launchFilter() {
-    
 }

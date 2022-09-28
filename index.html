@@ -74,53 +74,60 @@
         <h2>A PEDIDO</h2>
         <div class="filter">
             <div class="category-container">
-                <form action="">
 
-                    <label for="cat-tazas">Tazas
+                <label for="cat-tazas">Tazas
+                    <div class="checkbox active">
                         <input type="radio" id="cat-tazas" name="tazas" value="tazas">
                         </input>
-                        <div class="checkbox"></div>
-                    </label>
-                    <label for="cat-platos">Platos
+                    </div>
+                </label>
+                <label for="cat-platos">Platos
+                    <div class="checkbox">
                         <input type="radio" id="cat-platos" name="platos" value="platos">
                         </input>
-                        <div class="checkbox"></div>
-                    </label>
-                    <label for="cat-cuencos">Cuencos
+                    </div>
+                </label>
+                <label for="cat-cuencos">Cuencos
+                    <div class="checkbox">
                         <input type="radio" id="cat-cuencos" name="cuencos" value="cuencos">
                         </input>
-                        <div class="checkbox"></div>
-                    </label>
-                    <label for="cat-bandejas">Bandejas
+                    </div>
+                </label>
+                <label for="cat-bandejas">Bandejas
+                    <div class="checkbox">
                         <input type="radio" id="cat-bandejas" name="bandejas" value="bandejas">
                         </input>
-                        <div class="checkbox"></div>
-                    </label>
-                    <label for="cat-ensaladeras">Ensaladeras
+                    </div>
+                </label>
+                <label for="cat-ensaladeras">Ensaladeras
+                    <div class="checkbox">
                         <input type="radio" id="cat-ensaladeras" name="ensaladeras" value="ensaladeras">
                         </input>
-                        <div class="checkbox"></div>
-                    </label>
-                    <label for="cat-floreros">Floreros
+                    </div>
+                </label>
+                <label for="cat-floreros">Floreros
+                    <div class="checkbox">
                         <input type="radio" id="cat-floreros" name="floreros" value="floreros">
                         </input>
-                        <div class="checkbox"></div>
-                    </label>
-                    <label for="cat-teteras">Teteras
+                    </div>
+                </label>
+                <label for="cat-teteras">Teteras
+                    <div class="checkbox">
                         <input type="radio" id="cat-teteras" name="teteras" value="teteras">
                         </input>
-                        <div class="checkbox"></div>
-                    </label>
-                    <label for="cat-objetos">Objetos
+                    </div>
+                </label>
+                <label for="cat-objetos">Objetos
+                    <div class="checkbox">
                         <input type="radio" id="cat-objetos" name="objetos" value="objetos">
                         </input>
-                        <div class="checkbox"></div>
-                    </label>
-                </form>
+                    </div>
+                </label>
+
             </div>
         </div>
 
-        <div class="sizes">
+        <div id="sizes-list" class="sizes">
             <div class="size-card small">
                 <img src="public/images/tazas.png" alt="">
                 <div class="size-desc">
@@ -146,7 +153,7 @@
 
         </div>
 
-        <div class="products-row products-list">
+        <div id="products-list" class="products-row products-list">
             <div class="product-card">
                 <img src="./public/images/taza-editada.png" alt="">
                 <div class="product-card-desc">
@@ -219,7 +226,7 @@
                 <p>2022</p>
             </div>
             <div class="contact">
-                    <p> <b>Tel:</b> 3548  434942</p>
+                <p> <b>Tel:</b> 3548 434942</p>
                 <a href="http://instagram.com/sas_ceramica" target="_blank" rel="noopener noreferrer">
                     <div class="social">
                         <box-icon class="bx instagram-icon" type='logo' name='instagram'></box-icon>
@@ -233,7 +240,7 @@
 
 
 
-    <script src="./src/filter.js"></script>
+    <script src="./src/filter.js" type="module"></script>
     <script src="./src/app.js" type="module"></script>
 </body>
 
