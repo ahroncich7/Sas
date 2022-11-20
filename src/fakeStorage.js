@@ -2,7 +2,7 @@ let products = {
 
     tazas: {
         size: {
-            img: "public/images/tazas.png",
+            img: "public/images/tazas.jpg",
             small: {
                 title: "200 ml",
                 price: "$2000",
@@ -21,18 +21,18 @@ let products = {
 
         products: [
             {
-                img: "/",
+                img: "../public/images/taza-editada.png",
                 title: "titulo1",
                 price: "",
             },
 
             {
-                img: "/",
+                img: "../public/images/taza-editada.png",
                 title: "titulo2",
                 price: "",
             },
             {
-                img: "/",
+                img: "../public/images/taza-editada.png",
                 title: "titulo3",
                 price: "",
             }

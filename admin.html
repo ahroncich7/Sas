@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container w-50 mt-5">
+        <form action="">
+            <div class="mb-3">
+                <label for="category">Categoría:</label>
+                <input list="product-categories" id="category" name="category">
+
+                <datalist id="product-categories">
+                    <option value="Tazas">
+                    <option value="Platos">
+                    <option value="Cuencos">
+                    <option value="Bandejas">
+                    <option value="Ensaladeras">
+                    <option value="Floreros">
+                    <option value="Teteras">
+                    <option value="Objetos">
+                </datalist>
+            </div>
+            <div class=" mb-3">
+                        <label for="title" class="form-label">Título</label>
+                        <input type="text" name="title" class="form-control" id="title" placeholder="Título del producto">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Precio</label>
+                <input type="text" name="price" class="form-control" id="price" placeholder="Precio del producto">
+            </div>
+            <div class="mb-3">
+                <label for="img-name" class="form-label">Nombre imagen</label>
+                <input type="text" name="img-name" class="form-control" id="img-name" placeholder="Nombre de la imagen">
+            </div>
+            <input class="btn btn-success" id ="submit-btn" type="submit" value="Save Data">
+
+
+
+    </div>
+    </form>
+
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", ((e) => {
+            e.preventDefault()
+            const data = new FormData(document.querySelector("form"))
+            console.log(Object.fromEntries(data.entries()))
+        }))
+    </script>
+</body>
+
+</html>
