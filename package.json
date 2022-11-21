@@ -17,8 +17,5 @@
     "url": "https://github.com/ahroncich7/Sakito_1/issues"
   },
   "homepage": "https://github.com/ahroncich7/Sakito_1#readme",
-  "dependencies": {
-    "bootstrap": "^5.1.3",
-    "popper": "^1.0.1"
-  }
+  "dependencies": {}
 }
