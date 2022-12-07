@@ -9,6 +9,7 @@ app.listen(8091, () => {
     console.log("Server corriendo en puerto 3000")
 })
 
+app.use(express.static("../"))
 app.use(express.static("./"))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))

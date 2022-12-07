@@ -16,7 +16,7 @@ CREATE TABLE categoria (
 CREATE TABLE productos(
     titulo VARCHAR(30),
     precio INT(10),
-   	img VARCHAR(30),
+   	img VARCHAR(1500),
 	prod_id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     cat_id2 INT(10) NOT NULL,
 	    FOREIGN KEY (cat_id2) REFERENCES categoria (cat_id)

@@ -89,14 +89,16 @@ const productsController = {
                     data.data = "Datos actualizados"
                 } else if (data.data.affectedRows == 0) {
                     data.status = "Fail"
+                    console.log(data.data)
                     data.data = "No hay filas que afectar"
-                }else {
+                } else {
                     data.status = "Fail"
+                    console.log(data.data)
                     data.data = "Error al consultar"
                 }
                 res.send(data)
             }).catch((e) => {
-                res.send({ status: "Fail", data: "Error al consultar"})
+                res.send({ status: "Fail", data: "Error al consultar" })
             })
         } catch (e) {
             res.send({ status: "Fail", data: "Error en los datos del formulario", e })

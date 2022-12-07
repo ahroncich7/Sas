@@ -1,11 +1,11 @@
-import { chargeDataInForm, deleteProduct } from "./adminForm.js";
+class adminCard {
+
+    constructor(data, cardsContElement) {
 
 
-
-function newCard(data) {
-    let card = `
-            <div id="porducts" class="products">
-                <div class="row p-2" style=background-color:wheat>
+        this.card = `
+            <div id="porducts" class="products my-3">
+                <div class="row p-2" style=background-color:${data.stock?"lightgreen":"lightpink"}>
                     <div class="col-2  text-center" style=min-height:100px>
                         <img src="${data.img}" alt="" class="img-thumbnail" style=height: 100px>
                     </div>
@@ -14,8 +14,8 @@ function newCard(data) {
                         style=min-height:100px>
                         <p><span>Nombre: </span> ${data.titulo}</p>
                         <p><span>Precio: </span> $${data.precio}</p>
-                        <p><span>Categoria: </span> ${data.nombre}</p>
-                        <p><span>URL Imagen: </span> ${data.img}</p>
+                        <p><span>Categoria: </span> ${data.nombre_cat}</p>
+                        <p><span>En Stock: </span> ${data.stock?"Si":"No"}</p>
                         <p><span>ID: </span> ${data.prod_id}</p>
                     </div>
 
@@ -25,25 +25,15 @@ function newCard(data) {
                     </div>
                 </div>
             </div>`
+        
+        
+        cardsContElement.insertAdjacentHTML("beforeend", this.card)
+        this.editBtn = cardsContElement.querySelector(`#edit-${data.prod_id}`)
+        this.deleteBtn = cardsContElement.querySelector(`#delete-${data.prod_id}`)
+    }
 
-    let productCont = document.getElementById("products");
-    productCont.insertAdjacentHTML("beforeend", card)
+    
 
-    document.getElementById(`edit-${data.prod_id}`).addEventListener("click", ()=>{
-        chargeDataInForm(data)
-    })
-    document.getElementById(`delete-${data.prod_id}`).addEventListener("click", () => {
-        deleteProduct(data.prod_id)
-    })
 }
 
-
-function populate(productsList) {
-    let productCont = document.getElementById("products")
-    productCont.innerHTML = ""
-    productsList.forEach(product => {
-        newCard(product)
-    });
-}
-
-export { newCard, populate }
+export { adminCard }
