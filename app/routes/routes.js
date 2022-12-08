@@ -6,6 +6,10 @@ routes.get("/listByType", (req, res) => {
     productsController.listByType(req, res)
 })
 
+routes.get("/listCategory", (req, res) => {
+    productsController.getCategory(req, res)
+})
+
 routes.post("/insertProduct", (req, res) => {
     productsController.insertNewProduct(req, res)
 })

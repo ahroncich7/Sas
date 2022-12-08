@@ -14,6 +14,15 @@ class products {
         return this.db.query(query)
     }
 
+    selectCategory(category){
+
+        let query = 
+        `SELECT * FROM categoria  
+        WHERE categoria.nombre_cat = "${category}"`
+        
+        return this.db.query(query)
+    }
+
 
     insert(category, productData) {
         let query = `INSERT INTO productos VALUES (${Object.values(productData)}, (SELECT cat_id FROM categoria WHERE categoria.nombre_cat = "${category}"))`

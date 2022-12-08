@@ -12,6 +12,16 @@ const productsController = {
         }
     },
 
+    
+    getCategory: (req, res) => {
+        if (!req.query.category) {
+            res.send({ status: "Fail", data: "El atributo category está vacío" })
+        } else {
+            let responsePromise = products.selectCategory(req.query.category)
+            responsePromise.then((response) => { res.send(response) })
+        }
+    },
+
 
     listSizesExamples: (type) => {
         return `Aqui se mostrarán los ejemplos de tamaño para el tipo ${type}`

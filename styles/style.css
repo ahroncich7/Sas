@@ -80,20 +80,21 @@ body {
 
 /* Sections */
 
-/* LAST UPLOADS*/
+/* IN STOCK*/
 
 
 .products-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 80px;
+    margin-bottom: 100px;
 }
 
 .product-card {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    width: 300px;
 
 }
 
@@ -103,13 +104,28 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
+    gap: 1em;
 }
 
-.a-pedido {
+.call-to-action {
     text-decoration: none;
     background-color: var(--color3);
     color: var(--color1);
     padding: 14px 28px;
+}
+
+.call-to-action-small {
+    text-decoration: none;
+    text-align: center;
+    font-size: small;
+    font-weight: 600;
+    padding: 7px 0;
+    border-radius: 5px;
+}
+
+.call-to-action-small:hover {
+    background-color: var(--color4);
+    color: var(--color2);
 }
 
 
@@ -203,6 +219,7 @@ input {
     padding: 1em;
     box-sizing: border-box;
     border-radius: 1em;
+    margin-bottom: 100px;
 }
 
 .size-card {

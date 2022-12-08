@@ -5,6 +5,7 @@ USE sakito
 CREATE TABLE categoria (
     cat_id INT(5) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nombre_cat VARCHAR(15),
+    img VARCHAR(2000),
    	small_price int(10),
     small_cap VARCHAR(10),
     medium_price int(10),
