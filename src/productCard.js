@@ -10,7 +10,7 @@ class productCard {
         this.title = `<h3 class="product-title">${data.titulo}</h3>`
         this.price = `<span class="product-price">$${data.precio}</span>`
         this.img = `<img id = ${this.cardType}-img-${this.id} src="${data.img}" alt="${data.titulo}"></img>`
-        this.btn = `<a href="${this.message}" target="_blank" class="call-to-action-small">CONSULTAR</a>`
+        this.btn = `<a href="${this.message}" target="_blank" class="call-to-action-small"><box-icon type='logo' name='whatsapp'></box-icon>CONSULTAR</a>`
         this.setCard()
         this.productCardCont = productCardCont
     }
@@ -41,8 +41,7 @@ class productCard {
     }
 
     setWhatsappMessage(data) {
-        this.message = `https://wa.me/+543548434942?text=Hola%20me%20
-        interesa%20el%20producto:%20${data.titulo}%20id:%20${data.prod_id}`
+        this.message = `https://wa.me/+543548434942?text=Hola%20me%20interesa%20el%20producto:%20${data.titulo}%20id:%20${data.prod_id}`
     }
 
 }
