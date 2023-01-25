@@ -7,7 +7,7 @@ class productCard {
         this.setWhatsappMessage(data)
         this.cardType = cardType
         this.id = data.prod_id
-        this.title = `<h3 class="product-title">${data.titulo}</h3>`
+        this.title = `<h3 class="product-title">${data.titulo.toUpperCase()}</h3>`
         this.price = `<span class="product-price">$${data.precio}</span>`
         this.img = `<img id = ${this.cardType}-img-${this.id} src="${data.img}" alt="${data.titulo}"></img>`
         this.btn = `<a href="${this.message}" target="_blank" class="call-to-action-small"><box-icon type='logo' name='whatsapp'></box-icon>CONSULTAR</a>`
