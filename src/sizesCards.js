@@ -3,7 +3,7 @@ class sizesCard {
     defaultImg = ``
 
 
-    constructor(data, productCardCont, cardType) {
+    constructor(data, productCardContainer, cardType) {
 
         this.card =
             `<div class="size-card small">
@@ -28,7 +28,7 @@ class sizesCard {
                 </div>
             </div>`
 
-            productCardCont.innerHTML = this.card
+            productCardContainer.innerHTML = this.card
     }
 }
 

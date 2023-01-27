@@ -3,7 +3,7 @@ class productCard {
     defaultImg = `https://previews.123rf.com/images/chotwitnote/chotwitnote1801/chotwitnote180100477/92643317-conjunto-del-vector-de-vajilla-en-la-ilustraci%C3%B3n-blanca-del-fondo-.jpg`
 
 
-    constructor(data, productCardCont, cardType) {
+    constructor(data, productCardContainer, cardType) {
         this.setWhatsappMessage(data)
         this.cardType = cardType
         this.id = data.prod_id
@@ -12,12 +12,12 @@ class productCard {
         this.img = `<img id = ${this.cardType}-img-${this.id} src="${data.img}" alt="${data.titulo}"></img>`
         this.btn = `<a href="${this.message}" target="_blank" class="call-to-action-small"><box-icon type='logo' name='whatsapp'></box-icon>CONSULTAR</a>`
         this.setCard()
-        this.productCardCont = productCardCont
+        this.productCardContainer = productCardContainer
     }
 
     updateCard() {
         this.setCard()
-        this.productCardCont.insertAdjacentHTML("beforeend", this.card)
+        this.productCardContainer.insertAdjacentHTML("beforeend", this.card)
         this.imgEl = document.getElementById(this.cardType + "-img-" + this.id)
         this.setDefaultImg()
     }
