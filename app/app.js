@@ -2,10 +2,10 @@ const express = require("express");
 const app = express();
 const routes = require("./routes/routes");
 const cors = require("cors");
-
+const PORT = 8091;
 // SETTINGS
-app.listen(8091, () => {
-	console.log("Server corriendo en puerto 3000");
+app.listen(PORT, () => {
+	console.log(`Server corriendo en puerto ${PORT}`);
 });
 
 app.use(express.static("../"));
