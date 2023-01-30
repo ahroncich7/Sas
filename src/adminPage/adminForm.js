@@ -15,7 +15,6 @@ class adminForm {
         this.formElement.price.value = data.precio;
         this.formElement.img_url.value = data.img;
         this.formElement.id.value = Number(data.prod_id) || "-";
-
         window.scrollTo(0, 0)
     }
 
