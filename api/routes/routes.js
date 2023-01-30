@@ -1,36 +1,21 @@
 const express = require("express");
 const routes = express.Router();
-const productsController = require("../controllers/productsController.js");
+const productController = require("../controllers/product.js");
 
-routes.get("/listByType", (req, res) => {
-	productsController.listByType(req, res);
-});
+routes.get("/listByType", productController.listByType);
 
-routes.get("/listCategory", (req, res) => {
-	productsController.getCategory(req, res);
-});
+routes.get("/listCategory", productController.getCategory);
 
-routes.post("/insertProduct", (req, res) => {
-	productsController.insertNewProduct(req, res);
-});
+routes.post("/insertProduct", productController.insertNewProduct);
 
-routes.get("/listFilteredProducts", (req, res) => {
-});
+routes.delete("/deleteProduct", productController.deleteProduct);
 
-routes.delete("/deleteProduct", (req, res) => {
-	productsController.deleteProduct(req, res);
-});
+routes.get("/listAll", productController.listAll);
 
-routes.get("/listAll", (req, res) => {
-	productsController.listAll(req, res);
-});
+routes.get("/listInStock", productController.listProductsInStock);
 
-routes.get("/listInStock", (req, res) => {
-	productsController.listProductsInStock(req, res);
-});
+routes.put("/updateProduct", productController.updateProduct);
 
-routes.put("/updateProduct", (req, res) => {
-	productsController.updateProduct(req, res);
-});
+// routes.get("/listFilteredProducts", );
 
 module.exports = routes;
