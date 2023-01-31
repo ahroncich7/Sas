@@ -1,5 +1,5 @@
 import * as request from "./apiRequests.js";
-import { productCard } from "./products/model.js";
+import { productCard } from "./productCard.js";
 import { sizesCard } from "./sizesCards.js";
 
 

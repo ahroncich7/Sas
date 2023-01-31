@@ -1,4 +1,4 @@
-import { productCard } from "./products/model.js";
+import { productCard } from "./productCard.js";
 
 class artCard extends productCard {
     constructor(data, productCardCont, cardType) {
