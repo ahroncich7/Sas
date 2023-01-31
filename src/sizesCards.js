@@ -1,6 +1,6 @@
 class sizesCard {
 
-    defaultImg = ``
+    defaultImg = "";
 
 
     constructor(data, productCardContainer, cardType) {
@@ -26,10 +26,10 @@ class sizesCard {
                     <h3>${data.large_cap} ml</h3>
                     <span>$${data.large_price}</span>
                 </div>
-            </div>`
+            </div>`;
 
-            productCardContainer.innerHTML = this.card
+        productCardContainer.innerHTML = this.card;
     }
 }
 
-export {sizesCard}
+export {sizesCard};

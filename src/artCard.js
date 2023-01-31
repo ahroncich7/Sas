@@ -2,9 +2,9 @@ import { productCard } from "./productCard.js";
 
 class artCard extends productCard {
     constructor(data, productCardCont, cardType) {
-        super(data, productCardCont, cardType)
+        super(data, productCardCont, cardType);
 
-        this.title, this.price, this.btn = ""
+        this.title, this.price, this.btn = "";
 
     }
 
@@ -15,8 +15,8 @@ class artCard extends productCard {
                     <div class="product-card-desc">
                         ${this.title || undefined}
                     </div>
-            </div>`
+            </div>`;
     }
 }
 
-export {artCard}
+export {artCard};

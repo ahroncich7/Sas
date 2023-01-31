@@ -24,16 +24,16 @@ class adminCard {
                         <button id = delete-${data.prod_id} class="btn btn-danger" >Eliminar</button>
                     </div>
                 </div>
-            </div>`
+            </div>`;
         
         
-        cardsContElement.insertAdjacentHTML("beforeend", this.card)
-        this.editBtn = cardsContElement.querySelector(`#edit-${data.prod_id}`)
-        this.deleteBtn = cardsContElement.querySelector(`#delete-${data.prod_id}`)
+        cardsContElement.insertAdjacentHTML("beforeend", this.card);
+        this.editBtn = cardsContElement.querySelector(`#edit-${data.prod_id}`);
+        this.deleteBtn = cardsContElement.querySelector(`#delete-${data.prod_id}`);
     }
 
     
 
 }
 
-export { adminCard }
+export { adminCard };

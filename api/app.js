@@ -5,7 +5,7 @@ const cors = require("cors");
 const PORT = 8091;
 // SETTINGS
 app.listen(PORT, () => {
-	console.log(`Server corriendo en puerto ${PORT}`);
+    console.log(`Server corriendo en puerto ${PORT}`);
 });
 
 app.use(express.static("../"));
