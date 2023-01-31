@@ -1,7 +1,7 @@
-import { adminCard } from "./adminCard.js";
+import { adminProductCard } from "./adminProductCard.js";
 import { adminForm } from "./adminForm.js";
-import { failAlert, succesAlert } from "./alerts.js";
-import * as request from "./apiRequests.js";
+import { failAlert, succesAlert } from "../alerts.js";
+import * as request from "../apiRequests.js";
 
 const admForm = new adminForm("admin_form")
 const prodCardsCont = document.getElementById("products")
@@ -50,7 +50,7 @@ admForm.submmitBtn.addEventListener("click", () => {
 function populateProductsCards(productsList) {
     prodCardsCont.innerHTML = ""
     productsList.forEach(productData => {
-        let card = new adminCard(productData, prodCardsCont)
+        let card = new adminProductCard(productData, prodCardsCont)
 
         card.editBtn.addEventListener("click", () =>
 

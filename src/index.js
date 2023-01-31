@@ -1,7 +1,7 @@
 import * as request from "./apiRequests.js"
 import { artCard } from "./artCard.js";
 import { updateProductsByType, updateSizesByType } from "./filter.js";
-import { productCard } from "./productCard.js";
+import { productCard } from "./products/model.js";
 
 const productsInStockContainer = document.getElementById("products-in-stock")
 const artContainer = document.getElementById("art-cont")

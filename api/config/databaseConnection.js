@@ -1,10 +1,4 @@
 const mysql = require("mysql");
-// const DBCONFIG = {
-//     host: 'db4free.net',
-//     user: 'sasdbuser',
-//     password: 'sasdbpass',
-//     database: 'sas_db'
-// }
 
 const DBCONFIG = {
 	host: "bxdraymchrkn0xyjbvgs-mysql.services.clever-cloud.com",
@@ -12,13 +6,6 @@ const DBCONFIG = {
 	password: "03pZkHz2WCnVzrdf9iD2",
 	database: "bxdraymchrkn0xyjbvgs"
 };
-
-// const DBCONFIG = {
-//     host: '127.0.0.1',
-//     user: 'root',
-//     password: '',
-//     database: 'sakito'
-// }
 
 class dbConnection {
 
@@ -42,30 +29,16 @@ class dbConnection {
 	}
 
 	query(query) {
-		// console.log("La query es :", query)
-		let response = {
-			status: "Fail",
-			data: ""
-		};
 
-		if (this.connection) {
-			return new Promise((resolve, rejection) => {
-				this.connection.query(query, (error, results) => {
-					if (!error && results != {}) {
-						response = {
-							status: "OK",
-							data: results
-						};
-					} else {
-						response.data = error;
-					}
-					resolve(response);
-				});
+		return new Promise((resolve, reject) => {
+			this.connection.query(query, (error, results) => {
+				if (!error && results != {}) {
+					resolve(results);
+				} else {
+					reject(error);
+				}
 			});
-		} else {
-			response.data = "Base de datos desconectada";
-			return new Promise((resolve, rej) => resolve(response));
-		}
+		});
 	}
 }
 

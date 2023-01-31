@@ -1,10 +1,10 @@
-class adminCard {
+class adminProductCard {
 
     constructor(data, cardsContElement) {
 
 
         this.card = `
-            <div id="porducts" class="products my-3">
+            <div id="products" class="products my-3">
                 <div class="row p-2" style=background-color:${data.stock?"lightgreen":"lightpink"}>
                     <div class="col-2  text-center" style=min-height:100px>
                         <img src="${data.img}" alt="" class="img-thumbnail" style=height: 100px>
