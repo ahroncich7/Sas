@@ -1,13 +1,13 @@
 export class product {
 
-    static productsElement = document.getElementById("products-in-stock");
+    static productsListContainer = document.getElementById("products-in-stock");
 
     static defaultImg = "https://previews.123rf.com/images/chotwitnote/chotwitnote1801/chotwitnote180100477/92643317-conjunto-del-vector-de-vajilla-en-la-ilustraci%C3%B3n-blanca-del-fondo-.jpg";
 
 
     constructor(product) {
 
-        this.message = `https://wa.me/+543548434942?text=Hola%20me%20interesa%20el%20producto:%20${product.title}%20id:%20${product.id}`;
+        this.message = `https://wa.me/+543548434942?text=Hola,%20me%20interesa%20el%20producto%20${product.title}%20id:%20${product.id}`;
 
         this.card =
             `<div id = ${product.id} class="product-card">
@@ -23,10 +23,14 @@ export class product {
 
 
                     </div>
-            </div>`;            
+            </div>`;
 
+        this.render();
         this.productElement = document.getElementById(product.id);
     }
 
+    render() {
+        product.productsListContainer.insertAdjacentHTML("beforeend", this.card);
+    }
 
 }

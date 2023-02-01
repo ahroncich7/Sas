@@ -1,35 +1,18 @@
-import { getProductsInStock } from "../../src/services/apiRequests.js";
 import { product as productModel } from "./model.js";
 import { product as productView } from "./view.js";
 
 export class product {
 
-    constructor() {
-
+    constructor(productData) {
+        this.model = new productModel(productData);
+        this.view = new productView(this.model);
+        this.addEvents();
     }
 
     addEvents() {
-
-    }
-
-
-    getProductInStock(){
-        let prod = getProductsInStock();
-        return prod;
-    }
-
-    async updateProductsInStock() {
-        
-        let productPromise = await this.getProductInStock();
-        let productList = productPromise.data;   
-        console.log(productList);
-
-        productList.forEach(productData => {
-            let prod = new productModel(productData);
-            let prodView = new productView(prod);
-            productView.productsElement.insertAdjacentHTML("beforeend", prodView.card);
+        let imgEl = this.view.productElement.querySelector("img");
+        imgEl.addEventListener("error", () => {
+            imgEl.src = productView.defaultImg;
         });
     }
-
-
 }
