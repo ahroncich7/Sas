@@ -320,6 +320,10 @@ input {
     color: var(--color1);
 }
 
+.art-card .product-card-desc{
+    padding-bottom: 0;
+}
+
 
 /*FOOTER*/
 

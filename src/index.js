@@ -3,6 +3,7 @@ import { product as productController } from "../frontSrc/inStockProducts/contro
 import { sizesLogosController } from "../frontSrc/sizeLogos/controller.js";
 import { exampleProductController } from "../frontSrc/exampleProducts/controller.js";
 import { getAllProducts, getCategory, getProductsByType } from "./services/apiRequests.js";
+import { artObject } from "../frontSrc/artProducts/controller.js";
 
 
 
@@ -41,4 +42,17 @@ function updateSizesSection(type) {
         })
         .catch(e => console.log(e));
 }
+
+
+//Run art section
+
+
+document.getElementById("art-cont").innerHTML = "";
+let artObjectPromise = getProductsByType("teteras");
+artObjectPromise
+    .then(response => response.data.forEach(data => {
+        console.log(data);
+        let artObjectController = new artObject(data);
+    }))
+    .catch(e => console.log(e));
 

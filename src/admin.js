@@ -1,8 +1,10 @@
 import { adminCard } from "./adminCard.js";
 import { adminForm } from "./adminForm.js";
-import { failAlert, succesAlert } from "./alerts.js";
-import * as request from "./apiRequests.js";
+import { failAlert, succesAlert } from "./services/alerts.js";
+import * as request from "./services/apiRequests.js";
 
+
+alert("hola");
 const admForm = new adminForm("admin_form");
 const prodCardsCont = document.getElementById("products");
 updateProducts();
@@ -30,11 +32,11 @@ admForm.submmitBtn.addEventListener("click", () => {
 
         requestInsert
             .then(($response) => {
-                succesAlert($response.data);
+                succesAlert("Elemento creado");
                 updateProducts();
 
             })
-            .catch(e => failAlert(e));
+            .catch(e => failAlert(e.message));
     }
 
 
@@ -56,10 +58,10 @@ function populateProductsCards(productsList) {
             requestDelete
                 .then(($response) => {
                     console.log($response);
-                    succesAlert($response.data);
+                    succesAlert("Elemento eliminado");
                     updateProducts();
 
-                }).catch(e => failAlert(e));
+                }).catch(e => failAlert(e.message));
         });
     });
 }
