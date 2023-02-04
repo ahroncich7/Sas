@@ -3,9 +3,18 @@ let products = new PRODUCTS();
 
 const productsController = {
 
+
+
+    listAll: (req, res) => {
+        let responsePromise = products.selectAll();
+        responsePromise.then((response) => res.status(200).send({ data: response }))
+            .catch(err => res.status(500).send({ message: err }));
+    },
+
+
     listByType: (req, res) => {
         if (!req.query.type) {
-            res.status(400).send({ message: "El atributo Type está vacío" });
+            res.status(400).send({ message: "Field `type` can't be empty" });
         } else {
             let responsePromise = products.selectByType(req.query.type);
             responsePromise.then((response) => res.status(200).send({ data: response }))
@@ -33,11 +42,6 @@ const productsController = {
     },
 
 
-    listAll: (req, res) => {
-        let responsePromise = products.selectAll();
-        responsePromise.then((response) => res.status(200).send({ data: response }))
-            .catch(err => res.status(500).send({ message: err }));
-    },
 
 
     deleteProduct: (req, res) => {
@@ -87,12 +91,8 @@ const productsController = {
         let responsePromise = products.updateById(id, category, data);
         responsePromise.then((response) => res.status(200).send({ data: response }))
             .catch(err => res.status(500).send({ message: err }));
-    },
-
-
-    listSizesExamples: (type) => {
-        return `Aqui se mostrarán los ejemplos de tamaño para el tipo ${type}`;
-    },
+    }
+    
 };
 
 
