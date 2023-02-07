@@ -39,7 +39,6 @@ function updateList() {
         .then((response => {
             response.data.forEach((productData) => {
                 let product = new formProduct(productData);
-
                 product.getEditButton().addEventListener("click", () => {
                     editProduct(productData);
 
