@@ -73,7 +73,7 @@ const productsController = {
 
 
     updateProduct: (req, res) => {
-
+        console.log(req.body);
         if (!req.body) {
             res.status(400).send({ message: "Error en los datos del formulario" });
         }
@@ -90,7 +90,7 @@ const productsController = {
         let id = req.body.id;
         let responsePromise = products.updateById(id, category, data);
         responsePromise.then((response) => res.status(200).send({ data: response }))
-            .catch(err => res.status(500).send({ message: err }));
+            .catch(err => res.status(500).send({ message: err + "sssssssssssssssss"}));
     }
     
 };

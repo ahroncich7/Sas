@@ -32,7 +32,6 @@ class dbConnection {
 
         return new Promise((resolve, reject) => {
             this.connection.query(query, (error, results) => {
-                console.log(results);
                 if (!error) {
                     resolve(results);
                 } else {
