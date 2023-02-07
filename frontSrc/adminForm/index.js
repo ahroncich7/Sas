@@ -5,7 +5,8 @@ import { failAlert, succesAlert } from "../../src/services/alerts.js";
 import { productView } from "./productView.js";
 
 updateList();
-//Funcion guardar
+
+//Save from form
 
 let form = document.getElementById("admin_form");
 
@@ -28,7 +29,7 @@ function formHandling(data) {
 }
 
 
-//Actualizar
+//Update
 
 function updateList() {
     productView.productsContainer.innerHTML = "";
@@ -54,7 +55,7 @@ function updateList() {
 }
 
 
-//Funciones para botones 
+//Buttons Functions 
 
 function deleteProduct(id) {
     let deletePromise = deleteProductInDb(id);
