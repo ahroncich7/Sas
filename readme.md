@@ -89,7 +89,7 @@ GET/listCategory 🠮 Devuelve array con las categorías de la tabla CATEGORÍA
 
 GET/listInStock 🠮 Devuelve array con los productos cuyo campo stock es 1 (true)
 
-POST/insertProduct 🠮 Inserta fila en la tabla producto
+POST/insertProduct 🠮 Inserta fila en la tabla PRODUCTOS
 
 PUT/updateProduct 🠮 Modifica un registro por identificado por el ID(que viaja en el body de la petición)
 
