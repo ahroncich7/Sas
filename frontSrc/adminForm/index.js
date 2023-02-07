@@ -1,6 +1,6 @@
 import { formController } from "./formController.js";
 import { formProduct } from "./formProduct.js";
-import { deleteProduct, getAllProducts, insertDataInDB, updateDataInDB } from "../../src/services/apiRequests.js";
+import { deleteProductInDb, getAllProducts, insertDataInDB, updateDataInDB } from "../../src/services/apiRequests.js";
 import { failAlert, succesAlert } from "../../src/services/alerts.js";
 import { productView } from "./productView.js";
 
@@ -39,18 +39,14 @@ function updateList() {
         .then((response => {
             response.data.forEach((productData) => {
                 let product = new formProduct(productData);
-                
+
                 product.getEditButton().addEventListener("click", () => {
-                    formCtrl.setDataInForm(productData);
-                    succesAlert("Datos cargados en formulario");
+                    editProduct(productData);
+
                 });
 
                 product.getDeleteButton().addEventListener("click", () => {
-                    console.log("delete");
-                    let deletePromise = deleteProduct(productData.prod_id);
-                    deletePromise
-                        .then(() => { succesAlert("Producto eliminado"), updateList(); })
-                        .catch(e => failAlert(e));
+                    deleteProduct(productData.prod_id);
                 });
             });
             window.scrollTo(0, 0);
@@ -58,4 +54,18 @@ function updateList() {
         .catch(err => failAlert(err));
 }
 
+
+//Funciones para botones 
+
+function deleteProduct(id) {
+    let deletePromise = deleteProductInDb(id);
+    deletePromise
+        .then(() => { succesAlert("Producto eliminado"), updateList(); })
+        .catch(e => failAlert(e));
+}
+
+function editProduct(productData) {
+    formCtrl.setDataInForm(productData);
+    succesAlert("Datos cargados en formulario");
+}
 

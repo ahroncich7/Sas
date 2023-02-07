@@ -25,7 +25,7 @@ function updateDataInDB(dataObject) {
     return results;
 }
 
-function deleteProduct(id) {
+function deleteProductInDb(id) {
     let response = fetch("/deleteProduct", {
 
         headers: {
@@ -80,7 +80,7 @@ function getCategory(category) {
 export {
     insertDataInDB,
     updateDataInDB,
-    deleteProduct,
+    deleteProductInDb,
     getAllProducts,
     getProductsByType,
     getProductsInStock,
