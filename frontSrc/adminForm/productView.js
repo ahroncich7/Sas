@@ -1,6 +1,8 @@
-class adminCard {
+export class productView {
 
-    constructor(data, cardsContElement) {
+    static productsContainer = document.getElementById("products");
+
+    constructor(data) {
 
 
         this.card = `
@@ -21,19 +23,11 @@ class adminCard {
 
                     <div class="col-2 flex-column d-flex gap-1 justify-content-center" style=min-height:100px>
                         <button id = edit-${data.prod_id}  class="btn btn-success" >Editar</button>
-                        <button id = delete-${data.prod_id} class="btn btn-danger" >Eliminar</button>
+                        <button id = delete-${data.prod_id} class="btn btn-danger">Eliminar</button>
                     </div>
                 </div>
             </div>`;
         
-        
-        cardsContElement.insertAdjacentHTML("beforeend", this.card);
-        this.editBtn = cardsContElement.querySelector(`#edit-${data.prod_id}`);
-        this.deleteBtn = cardsContElement.querySelector(`#delete-${data.prod_id}`);
-    }
 
-    
-
+    }  
 }
-
-export { adminCard };
