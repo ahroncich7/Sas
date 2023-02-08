@@ -1,19 +1,19 @@
 # <span style="color:green">**|**</span> SAS Site &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ![badge](https://img.shields.io/badge/Status-in%20progress-yellowgreen)
 
 
-*Sitio web para emprendimiento de marca **SAS Cerámica***
+*Sitio web para emprendimiento de la marca **SAS Cerámica***
 
 <br>
 
 ## <span style="color:green">|</span> Índice&nbsp;&nbsp;🔍
 
 
-- ### <a target= "introduccion" >Introducción </a>
-- ### <a target="id">Tecnologías usadas </a>
-- ### <a target ="implementacion"> Implementación </a>
-- ### <a target ="utilizacion"> Utilización </a>
-- ### <a target ="front-end"> Front-end </a>
-- ### <a target= "conclusiones"> Conclusiones </a>
+- ### [Introducción](#introduccion)
+- ### [Tecnologías usadas](#tecnologias)
+- ### [Implementación](#implementacion)
+- ### [Utilización](#utilizacion)
+- ### [Front-End](#frontend)
+- ### [Conclusiones](#conclusion)
 
 <br>
 
@@ -24,7 +24,7 @@
 Se decidió desarrollar una app que hiciera de API, manejando endpoints para permitir tanto el CRUD de productos en una base de datos como la visualización del sitio en si mismo. 
 <br>
 
-## <span id= "id" style="color:green">|</span> Tecnologías usadas&nbsp;&nbsp;🧰
+## <span id= "tecnologias" style="color:green">|</span> Tecnologías usadas&nbsp;&nbsp;🧰
 
 <br>
 
@@ -68,7 +68,7 @@ Por lo tanto, en éste caso el [modelo](https://github.com/ahroncich7/Sas/blob/d
 
 <br>
 
-Se utilizaron los middlewares express.JSON() y express.urlencoded()para parsear las peticiones que llegan por HTTP del cliente.
+Se utilizaron los middlewares express.JSON() y express.urlencoded() para parsear las peticiones que llegan por HTTP del cliente.
 
 <br>
 
@@ -98,13 +98,27 @@ DELETE/deleteProduct 🠮 Elimina de la tabla PRODUCTOS un registro identificado
 <br>
 
 
-## <span id= "front-end" style="color:green">|</span> Front-End &nbsp;&nbsp;💻
+## <span id= "frontend" style="color:green">|</span> Front-End &nbsp;&nbsp;💻
 
 <br>
 
-Con el fin de hacer públicos los productos de la marca y brindar una herramienta de difusión de la misma, se utilizaron los datos proveidos por la API creada para alimentar la estructura de un front-end sencillo, con estilos definidos con hojas de [CSS](https://developer.mozilla.org/es/docs/Web/CSS) y [Bootstrap](https://www.getbootstrap.com/).
+Con el fin de hacer públicos los productos de la marca y brindar una herramienta de difusión de la misma, se utilizaron los datos provistos por la API creada para alimentar la estructura de un front-end sencillo, con estilos definidos con hojas de [CSS](https://developer.mozilla.org/es/docs/Web/CSS) y [Bootstrap](https://www.getbootstrap.com/).
+
+<br>
+
+<p align="center">
+<img src="https://i.ibb.co/Stm6Bhh/image.png" alt="image" border="0">
+</p>
+
+<br>
 
 También se hizo uso de un apartado de administrador con un formulario que permite dar de alta nuevos productos en la base de datos, como así también modificar y eliminar registros.
+
+<br>
+
+<p align="center">
+<img src="https://i.ibb.co/DryGKhG/image.png" alt="image" border="0">
+</p>
 
 <br>
 
