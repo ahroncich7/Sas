@@ -5,7 +5,8 @@ const DBCONFIG = {
     host: CONFIG.DB_HOST,
     user: CONFIG.DB_USER,
     database: CONFIG.DB_DATABASE,
-    password: CONFIG.DB_PASSWORD
+    password: CONFIG.DB_PASSWORD, 
+    port: CONFIG.DB_PORT
 };
 
 class dbConnection {

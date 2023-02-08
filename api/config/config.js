@@ -5,6 +5,7 @@ const DB_HOST = process.env.DB_HOST || "bxdraymchrkn0xyjbvgs-mysql.services.clev
 const DB_USER = process.env.DB_USER || "u02ffgz5temaryfh";
 const DB_DATABASE = process.env.DB_DATABASE || "bxdraymchrkn0xyjbvgs";
 const DB_PASSWORD = process.env.DB_PASSWORD || "03pZkHz2WCnVzrdf9iD2";
+const DB_PORT = process.env.DB_PORT || 3306;
 
 
 module.exports = {
@@ -12,5 +13,6 @@ module.exports = {
     DB_HOST, 
     DB_USER,
     DB_DATABASE,
-    DB_PASSWORD
+    DB_PASSWORD, 
+    DB_PORT
 };
