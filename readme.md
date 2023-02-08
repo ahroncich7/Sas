@@ -8,12 +8,12 @@
 ## <span style="color:green">|</span> Índice&nbsp;&nbsp;🔍
 
 
-- ### <a target= "#introduccion" >Introducción </a>
-- ### <a target="#tecnologias">Tecnologías usadas </a>
-- ### <a target ="#implementacion"> Implementación </a>
-- ### <a target ="#utilizacion"> Utilización </a>
-- ### <a target ="#front-end"> Front-end </a>
-- ### <a target= "#conclusiones"> Conclusiones </a>
+- ### [Introducción](#introduccion)
+- ### [Tecnologías usadas](#tecnologias)
+- ### [Implementación](#implementacion)
+- ### [Utilización](#utilizacion)
+- ### [Front-End](#front-end)
+- ### [Conclusiones](#conclusiones)
 
 <br>
 
@@ -104,7 +104,21 @@ DELETE/deleteProduct 🠮 Elimina de la tabla PRODUCTOS un registro identificado
 
 Con el fin de hacer públicos los productos de la marca y brindar una herramienta de difusión de la misma, se utilizaron los datos provistos por la API creada para alimentar la estructura de un front-end sencillo, con estilos definidos con hojas de [CSS](https://developer.mozilla.org/es/docs/Web/CSS) y [Bootstrap](https://www.getbootstrap.com/).
 
+<br>
+
+<p align="center">
+<img src="https://i.ibb.co/Stm6Bhh/image.png" alt="image" border="0">
+</p>
+
+<br>
+
 También se hizo uso de un apartado de administrador con un formulario que permite dar de alta nuevos productos en la base de datos, como así también modificar y eliminar registros.
+
+<br>
+
+<p align="center">
+<img src="https://i.ibb.co/DryGKhG/image.png" alt="image" border="0">
+</p>
 
 <br>
 
