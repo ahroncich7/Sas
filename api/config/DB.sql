@@ -16,7 +16,6 @@ CREATE TABLE `categoria` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8
 
 
-/*INSERT EXAMPLES*/ 
 
 CREATE TABLE `productos` (
  `titulo` varchar(30) DEFAULT NULL,
@@ -30,6 +29,8 @@ CREATE TABLE `productos` (
  CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`cat_id2`) REFERENCES `categoria` (`cat_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8
 
+
+/*INSERT EXAMPLES*/ 
 
 INSERT INTO categoria VALUES (
     null, 
