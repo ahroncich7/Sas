@@ -1,7 +1,7 @@
 # <span style="color:green">**|**</span> SAS Site &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    ![badge](https://img.shields.io/badge/Status-in%20progress-yellowgreen)
 
 
-*Sitio web para emprendimiento de marca **SAS Cerámica***
+*Sitio web para emprendimiento de la marca **SAS Cerámica***
 
 <br>
 
@@ -68,7 +68,7 @@ Por lo tanto, en éste caso el [modelo](https://github.com/ahroncich7/Sas/blob/d
 
 <br>
 
-Se utilizaron los middlewares express.JSON() y express.urlencoded()para parsear las peticiones que llegan por HTTP del cliente.
+Se utilizaron los middlewares express.JSON() y express.urlencoded() para parsear las peticiones que llegan por HTTP del cliente.
 
 <br>
 
