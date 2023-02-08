@@ -12,8 +12,8 @@
 - ### [Tecnologías usadas](#tecnologias)
 - ### [Implementación](#implementacion)
 - ### [Utilización](#utilizacion)
-- ### [Front-End](#front-end)
-- ### [Conclusiones](#conclusiones)
+- ### [Front-End](#frontend)
+- ### [Conclusiones](#conclusion)
 
 <br>
 
@@ -98,7 +98,7 @@ DELETE/deleteProduct 🠮 Elimina de la tabla PRODUCTOS un registro identificado
 <br>
 
 
-## <span id= "front-end" style="color:green">|</span> Front-End &nbsp;&nbsp;💻
+## <span id= "frontend" style="color:green">|</span> Front-End &nbsp;&nbsp;💻
 
 <br>
 
