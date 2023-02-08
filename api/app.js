@@ -1,17 +1,20 @@
 const express = require("express");
-const app = express();
 const routes = require("./routes/routes");
+const CONFIG = require("./config/config.js");
 const cors = require("cors");
-const PORT = 8091;
+
+
 // SETTINGS
-app.listen(PORT, () => {
-    console.log(`Server corriendo en puerto ${PORT}`);
+const app = express();
+
+app.listen(CONFIG.PORT, () => {
+    console.log(`Server corriendo en puerto ${CONFIG.PORT}`);
 });
 
 app.use(express.static("./"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-// app.use(cors())
+app.use(cors());
 
 
 // ROUTES

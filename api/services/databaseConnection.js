@@ -1,19 +1,18 @@
 const mysql = require("mysql");
+const CONFIG = require("../config/config.js");
 
 const DBCONFIG = {
-    host: "bxdraymchrkn0xyjbvgs-mysql.services.clever-cloud.com",
-    user: "u02ffgz5temaryfh",
-    password: "03pZkHz2WCnVzrdf9iD2",
-    database: "bxdraymchrkn0xyjbvgs"
+    host: CONFIG.DB_HOST,
+    user: CONFIG.DB_USER,
+    database: CONFIG.DB_DATABASE,
+    password: CONFIG.DB_PASSWORD
 };
 
 class dbConnection {
 
     constructor() {
         try {
-            this.connection = mysql.createPool(
-                DBCONFIG
-            );
+            this.connection = mysql.createPool(DBCONFIG);
             this.connection.query("SHOW DATABASES", (error, results) => {
                 if (!error) {
                     console.log("Base de datos funcionando");
