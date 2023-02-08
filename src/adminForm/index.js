@@ -1,7 +1,7 @@
 import { formController } from "./formController.js";
 import { formProduct } from "./formProduct.js";
 import { deleteProductInDb, getAllProducts, insertDataInDB, updateDataInDB } from "../../src/services/apiRequests.js";
-import { failAlert, succesAlert } from "../../src/services/alerts.js";
+import { failAlert, succesAlert } from "../services/alerts.js";
 import { productView } from "./productView.js";
 
 updateList();

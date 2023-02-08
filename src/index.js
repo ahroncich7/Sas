@@ -1,9 +1,9 @@
-import { checkBoxesController } from "../frontSrc/customCheckbox/controller.js";
-import { product as productController } from "../frontSrc/inStockProducts/controller.js";
-import { sizesLogosController } from "../frontSrc/sizeLogos/controller.js";
-import { exampleProductController } from "../frontSrc/exampleProducts/controller.js";
+import { checkBoxesController } from "./customCheckbox/controller.js";
+import { product as productController } from "./inStockProducts/controller.js";
+import { sizesLogosController } from "./sizeLogos/controller.js";
+import { exampleProductController } from "./exampleProducts/controller.js";
+import { artObject } from "./artProducts/controller.js";
 import { getAllProducts, getCategory, getProductsByType } from "./services/apiRequests.js";
-import { artObject } from "../frontSrc/artProducts/controller.js";
 
 
 
@@ -51,7 +51,6 @@ document.getElementById("art-cont").innerHTML = "";
 let artObjectPromise = getProductsByType("teteras");
 artObjectPromise
     .then(response => response.data.forEach(data => {
-        console.log(data);
         let artObjectController = new artObject(data);
     }))
     .catch(e => console.log(e));
