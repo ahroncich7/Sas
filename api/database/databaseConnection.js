@@ -11,7 +11,14 @@ const DBCONFIG = {
 
 class dbConnection {
 
+    static #instance;
+
     constructor() {
+
+        if(dbConnection.#instance){
+            return dbConnection.#instance;
+        }
+
         try {
             this.connection = mysql.createPool(DBCONFIG);
             this.connection.query("SHOW DATABASES", (error, results) => {
@@ -21,10 +28,11 @@ class dbConnection {
                     console.log("No se pudo conectar la base de datos: ", error.message);
                 }
             });
-
+            dbConnection.#instance = this;
         } catch (e) {
             console.log("No se pudo crear conexion con base de datos", e);
         }
+
 
     }
 
