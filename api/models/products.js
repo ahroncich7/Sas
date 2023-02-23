@@ -1,4 +1,4 @@
-const dbConnection = require("../services/databaseConnection.js");
+const dbConnection = require("../database/databaseConnection.js");
 
 
 class products {
