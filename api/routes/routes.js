@@ -1,6 +1,21 @@
 const express = require("express");
 const routes = express.Router();
 const productController = require("../controllers/product.js");
+const path = require("path");
+
+
+
+
+
+routes.get("/admin", (req, res) => {
+    res.sendFile(path.resolve("admin.html"));
+});
+
+routes.get("/", (req, res) => {
+    res.sendFile(path.resolve("index.html"));
+});
+
+routes.get("/login");
 
 routes.get("/listByType", productController.listByType);
 

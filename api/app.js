@@ -11,7 +11,7 @@ app.listen(CONFIG.PORT, () => {
     console.log(`Server corriendo en puerto ${CONFIG.PORT}`);
 });
 
-app.use(express.static("./"));
+app.use(express.static("./public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
