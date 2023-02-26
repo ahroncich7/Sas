@@ -73,7 +73,6 @@ const productsController = {
 
 
     updateProduct: (req, res) => {
-        console.log(req.body);
         if (!req.body) {
             res.status(400).send({ message: "Error en los datos del formulario" });
         }
