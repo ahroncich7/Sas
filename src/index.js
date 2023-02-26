@@ -3,13 +3,13 @@ import { product as productController } from "./inStockProducts/controller.js";
 import { sizesLogosController } from "./sizeLogos/controller.js";
 import { exampleProductController } from "./exampleProducts/controller.js";
 import { artObject } from "./artProducts/controller.js";
-import { getAllProducts, getCategory, getProductsByType } from "./services/apiRequests.js";
+import { getAllProducts, getCategory, getProductsByType, getProductsInStock } from "./services/apiRequests.js";
 
 
 
 //Run products in stock section
 
-let productsInStockPromise = getAllProducts();
+let productsInStockPromise = getProductsInStock();
 productsInStockPromise
     .then(response => response.data.forEach(data => {
         let product = new productController(data);
@@ -33,6 +33,7 @@ function updateSizesSection(type) {
 
 
     let productsByTypePromise = getProductsByType(type);
+    console.log(productsByTypePromise);
     productsByTypePromise
         .then(response => {
             exampleProductController.resetExampleContainer();
