@@ -112,7 +112,7 @@ Con el fin de hacer públicos los productos de la marca y brindar una herramient
 
 <br>
 
-También se hizo uso de un apartado de administrador con un formulario que permite dar de alta nuevos productos en la base de datos, como así también modificar y eliminar registros.
+También se hizo uso de un apartado de administrador con un formulario que permite dar de alta nuevos productos en la base de datos, como así también modificar y eliminar registros. Para acceder al mismo, no obstante, es necesario ingresar la contraseña correcta. 
 
 <br>
 
