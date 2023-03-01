@@ -5,7 +5,7 @@ const authMiddleware = {
     autenticateAdmin: (req, res, next) => {
         
         // check if the req come from a client with valid admin pass 
-        if (req.query.pass == ADMIN_PASS) {
+        if (req.query.pass & req.query.pass == ADMIN_PASS) {
             next();
         } else {
             res.redirect("/login");
