@@ -1,9 +1,9 @@
 {
   "name": "SAS",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
     "start": "node ./api/app.js",
     "dev": "nodemon ./api/app.js",
     "lint": "eslint --fix ."
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/ahroncich7/Sas.git"
   },
-  "keywords": [],
+  "keywords": ["node", "api", "express", "ceramics", "artist", "web development"],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "eslint": "^8.30.0",
     "nodemon": "^2.0.20"
   }

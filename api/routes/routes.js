@@ -1,21 +1,15 @@
 const express = require("express");
+const adminController = require("../controllers/admin.js");
 const routes = express.Router();
 const productController = require("../controllers/product.js");
-const path = require("path");
+const { autenticateAdmin } = require("../middleware/auth.js");
 
 
 
 
+routes.get("/admin", autenticateAdmin, adminController.sendAdmin);
 
-routes.get("/admin", (req, res) => {
-    res.sendFile(path.resolve("admin.html"));
-});
-
-routes.get("/", (req, res) => {
-    res.sendFile(path.resolve("index.html"));
-});
-
-routes.get("/login");
+routes.get("/login", adminController.sendLogin);
 
 routes.get("/listByType", productController.listByType);
 
