@@ -26,6 +26,8 @@ function formHandling(data) {
     apiPromise
         .then(() => { succesAlert("Elemento modificado en DB"), updateList(); })
         .catch(() => failAlert("Hubo un problema"));
+    
+    formCtrl.setDataInForm({});
 }
 
 
