@@ -28,7 +28,7 @@
   "homepage": "https://github.com/ahroncich7/Sas#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mysql": "^2.18.1"
+    "mysql2": "^3.2.0"
   },
   "devDependencies": {
     "cors": "^2.8.5",
