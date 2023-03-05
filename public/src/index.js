@@ -33,7 +33,6 @@ function updateSizesSection(type) {
 
 
     let productsByTypePromise = getProductsByType(type);
-    console.log(productsByTypePromise);
     productsByTypePromise
         .then(response => {
             exampleProductController.resetExampleContainer();
