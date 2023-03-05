@@ -301,6 +301,15 @@ input {
     margin: 0;
 }
 
+.examples-description{
+    max-width: 980px;
+}
+
+.examples-description p{
+    font-size: 1.25em;
+    text-align: center;
+}
+
 /*ART*/
 
 .art-row {
@@ -369,13 +378,17 @@ input {
 
 @media screen and (max-width: 1060px) {
 
-    .sizes {
+    .sizes .examples-description{
         flex-direction: column;
         width: 640px;
         align-items: center;
         gap: 20px;
         padding: 2em;
     }
+/* 
+    .examples-description{
+        width: 640px;
+    } */
 
 
 

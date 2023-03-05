@@ -1,6 +1,6 @@
 {
   "name": "SAS",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/ahroncich7/Sas.git"
   },
-  "keywords": ["node", "api", "express", "ceramics", "artist", "web development"],
+  "keywords": [
+    "node",
+    "api",
+    "express",
+    "ceramics",
+    "artist",
+    "web development"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
