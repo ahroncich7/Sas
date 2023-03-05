@@ -10,5 +10,6 @@ export class sizesLogosModel {
         this.small_cap = data.small_cap || undefined;
         this.medium_cap = data.medium_cap || undefined;
         this.large_cap = data.large_cap || undefined;
+        this.U_M = data.U_M || undefined;
     }
 }
