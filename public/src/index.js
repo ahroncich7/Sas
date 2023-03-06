@@ -47,11 +47,11 @@ function updateSizesSection(type) {
 //Run art section
 
 
-document.getElementById("art-cont").innerHTML = "";
-let artObjectPromise = getProductsByType("teteras");
-artObjectPromise
-    .then(response => response.data.forEach(data => {
-        let artObjectController = new artObject(data);
-    }))
-    .catch(e => console.log(e));
+// document.getElementById("art-cont").innerHTML = "";
+// let artObjectPromise = getProductsByType("teteras");
+// artObjectPromise
+//     .then(response => response.data.forEach(data => {
+//         let artObjectController = new artObject(data);
+//     }))
+//     .catch(e => console.log(e));
 
