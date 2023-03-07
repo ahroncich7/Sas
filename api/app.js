@@ -3,6 +3,7 @@ const express = require("express");
 const routes = require("./routes/routes");
 const CONFIG = require("./config/config.js");
 const cors = require("cors");
+const addVisit = require("./middleware/checkVisitors.js");
 
 
 // SETTINGS
@@ -16,7 +17,8 @@ app.use(express.static("./public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cors());
+app.use("/", addVisit);
 
 
 // ROUTES
-app.use("/", routes);
+app.use("/",routes);
