@@ -1,14 +1,14 @@
 function insertDataInDB(dataObject) {
-    const results = fetch("/insertProduct", {
+    const request = fetch("/insertProduct", {
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
         },
         method: "POST",
         body: JSON.stringify(dataObject)
-    }).then((e) => e.json());
+    });
 
-    return results;
+    return request;
 }
 
 function updateDataInDB(dataObject) {
@@ -20,7 +20,7 @@ function updateDataInDB(dataObject) {
         },
         method: "PUT",
         body: JSON.stringify(dataObject)
-    }).then((e) => e.json());
+    });
 
     return results;
 }

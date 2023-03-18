@@ -14,19 +14,19 @@ let formCtrl = new formController(form);
 
 formCtrl.setOnClickEvent(formHandling);
 
-function formHandling(data) {
+async function formHandling(data) {
 
     if (!formCtrl.validateForm()) {
         failAlert("Complete todos los campos");
         return;
     }
 
-    let apiPromise = data.id === "-" ? insertDataInDB(data) : updateDataInDB(data);
+    let apiRequest = data.id === "-" ? insertDataInDB(data) : updateDataInDB(data);
+    let response = await apiRequest;
+    if (response.status != 200) {
+        failAlert("Hubo un problema");
+    } else { succesAlert("Elemento modificado en la DB"); }
 
-    apiPromise
-        .then(() => { succesAlert("Elemento modificado en DB"), updateList(); })
-        .catch(() => failAlert("Hubo un problema"));
-    
     formCtrl.setDataInForm({});
 }
 
