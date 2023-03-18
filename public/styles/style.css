@@ -185,11 +185,12 @@ h1, h2{
     padding-bottom: 2rem;
 }
 
-/* .call-to-action {
+.call-to-action {
+    background-color: var(--color3);
     text-decoration: none;
     color: var(--color1);
     padding: 14px 28px;
-} */
+}
 
 /* .call-to-action-small {
     text-decoration: none;
@@ -203,9 +204,9 @@ h1, h2{
     align-items: center;
     gap: 5px;
     line-height: inherit;
-} */
+}
 
-/* .call-to-action-small:hover {
+.call-to-action-small:hover {
     background-color: var(--color4);
     color: var(--color2);
 } */
