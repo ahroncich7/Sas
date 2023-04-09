@@ -15,8 +15,12 @@
 
 * {
     font-family: 'Raleway', sans-serif;
+    color: var(--color5);
 }
 
+a, a:visited {
+    text-decoration: none;
+}
 
 body::-webkit-scrollbar{
     width: 10px;
@@ -37,6 +41,14 @@ header {
     width: 100%;
     padding: 20px;
     position: absolute;
+}
+
+
+/* BUTTONS */
+
+.btn-light {
+    background-color: var(--color4);
+    color: var(--color5);
 }
 
 
