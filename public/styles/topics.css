@@ -1,0 +1,102 @@
+.topics .container>div {
+    flex-grow: 1;
+}
+
+
+.topic-1 {
+    background-color: var(--color2);
+}
+
+.topic-2 {
+    background-color: var(--color3);
+}
+
+.topic-3 {
+    background-color: var(--color2);
+}
+
+.topic-title {
+    animation-name: animationRight;
+    animation-duration: 3s;
+    border: var(--color5) solid 2px;
+    margin: inherit!important;
+    margin-bottom: inherit!important;
+}
+
+.topics img {
+    max-height: 80vh;
+    max-width: 80vw;
+}
+
+.topic-img {
+    animation-name: animationLeft;
+    animation-duration: 3s;
+
+}
+
+.card-container p {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    translate: 0 -50%;
+    color: var(--color1);
+    visibility: hidden;
+}
+
+.card-container {
+
+    position: relative;
+    width: max-content;
+}
+
+.card-container::before {
+    display: block;
+    content: " ";
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color5);
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.card-container:hover p, .card-container:active p{
+    visibility: visible;    
+}
+
+.card-container:hover::before {
+    opacity: 0.5;
+}
+
+
+
+
+
+
+@keyframes animationRight {
+
+    from {
+        transform: translate(-50%);
+    }
+
+    to {
+        position: inherit;
+        transform: translate(0%);
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes animationLeft {
+
+    from {
+        transform: translate(50%);
+
+    }
+
+    to {
+        position: inherit;
+        transform: translate(0%);
+        animation-fill-mode: forwards;
+    }
+}
