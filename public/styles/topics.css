@@ -16,6 +16,7 @@
 }
 
 .topic-title {
+    max-width: 80vw;
     animation-name: animationRight;
     animation-duration: 3s;
     border: var(--color5) solid 2px;
@@ -70,7 +71,7 @@
 }
 
 
-
+/* ANIMATIONS */
 
 
 
@@ -100,3 +101,16 @@
         animation-fill-mode: forwards;
     }
 }
+
+
+/* MEDIA QUERIES */
+
+
+
+@media screen and (max-width: 425px) {
+
+    h2{
+        font-size: 16px!important
+    };
+    
+  }

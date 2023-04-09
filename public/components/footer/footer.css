@@ -1,0 +1,26 @@
+.footer{
+    font-size: 12px;
+    background-color: var(--color5);
+}
+
+.footer *{
+    color: var(--color1);
+}
+
+.footer .title{
+    border-bottom: var(--color1) solid 2px;
+    display: inline-block;
+}
+
+.footer .social {
+    display: flex;
+    align-items: center;
+}
+
+.footer box-icon {
+    fill: var(--color1);
+}
+
+.footer box-icon:hover {
+    color: var(--color1);
+}
