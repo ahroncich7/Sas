@@ -1,5 +1,10 @@
 /* HEADER */
 
+header {
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+}
 
 header .menu{
     max-width: 660px;
@@ -38,7 +43,7 @@ header .dropdown-item:hover{
 @media screen and (max-width: 992px ) {
     
     header .menu{
-        background-color: var(--color1-75);
+        background-color: var(--color1-50);
     }
 
     header .menu * {
