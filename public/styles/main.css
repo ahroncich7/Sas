@@ -8,7 +8,7 @@
     --color5: #222222;
     --color6: #918175;
 
-    --color1-75: #efefefab;
+    --color1-50: #efefefde;
     --color2-50: #decbb779;
     font-family: 'Raleway', sans-serif;
 }
@@ -22,25 +22,16 @@ a, a:visited {
     text-decoration: none;
 }
 
-body::-webkit-scrollbar{
+*::-webkit-scrollbar{
     width: 10px;
 }
 
-body::-webkit-scrollbar-track-piece{
+*::-webkit-scrollbar-track-piece{
     background-color: var(--color4);
     padding: 0 2px;
 }
-body::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb{
     background-color: var(--color3 );
-}
-
-
-/* HEADER AND FOOTER*/
-
-header {
-    width: 100%;
-    padding: 20px;
-    position: absolute;
 }
 
 
