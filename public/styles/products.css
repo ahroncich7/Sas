@@ -1,0 +1,128 @@
+body {
+    background-color: var(--color1);
+}
+
+.hero-products {
+    height: 50vh;
+    min-height: 200px;
+}
+
+
+.filter-container {
+    min-width: 250px;
+    max-width: 100%;
+    height: max-content;
+}
+
+.products-list {
+    flex: 1 1 auto;
+    min-width: 300px;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+
+/* CARDS */
+
+.card-img{
+    text-align: center;
+    width: 250px;
+
+}
+
+.card-img img{
+    width: 100%;
+}
+
+.product-card-desc{
+    letter-spacing: 2px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+
+
+
+.card-img{
+    text-align: center;
+    text-justify:auto;
+    position: relative;
+}
+
+.card-img::after{
+    content: "";
+    background-color: var(--color4) ;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    width: 250px;
+    height: 250px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out ;
+}
+
+.card-img a {
+    color: var(--color2);
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+
+.card-img:hover::after, .card-img:active::after{
+    opacity: 0.8;
+}
+
+.card-img:hover>a, .card-img:active>a{
+    opacity: 1;
+}
+
+.card-img h3{
+    letter-spacing: 6px;
+    color: var(--color1);
+}
+
+
+
+/* FILTER */
+
+.form-check-input:checked {
+    background-color: var(--color3);
+    border-color: var(--color3);
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width: 768px) {
+
+    .products {
+        flex-wrap: wrap;
+    }
+
+    .filter-container {
+        width: 100vw;
+    }
+
+    .custom-card {
+        width: 100vw !important;
+        height: auto;
+    }
+
+    .cards-container {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .filter {
+        display: flex;
+        gap: 2em;
+        flex-wrap: wrap;
+    }
+
+}
