@@ -16,12 +16,12 @@ header .navbar{
 } 
 
 
-header .nav-link{
+header .nav-link, header .nav-link *{
     color: var(--color1);
 }
 
 
-header .nav-link:hover, header .nav-link:focus, header .btn:focus, header .btn:hover{
+.nav-link:hover, .nav-link:focus, .btn:focus, .btn:hover, .nav-link span:hover, .nav-link span:focus {
     color: var(--color2);
 }
 
