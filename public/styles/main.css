@@ -43,6 +43,17 @@ a, a:visited {
 }
 
 
+/* HIDDENS */
+
+.ocult-no-stock{
+    display: none!important;
+}
+
+.ocult-filtered{
+    display: none!important;
+}
+
+
 /* ANIMATION */
 
 .fadeIn{

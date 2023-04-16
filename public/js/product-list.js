@@ -30,10 +30,11 @@ productsPromise
 
 // Aplica funcionalidad al filtro de productos en stock
 const checkboxInStock = document.getElementById("in-stock");
-checkboxInStock.addEventListener("click", (e)=>{
+checkboxInStock.addEventListener("click", ()=>{
     let productsNoInStock = document.querySelectorAll(".no-stock");
-    productsNoInStock.forEach(product => product.classList.toggle("d-none"));
+    productsNoInStock.forEach(product => product.classList.toggle("ocult-no-stock"));
 });
+
 
 // Aplica funcionalidad al filtro de categorías
 const checkboxes = document.querySelectorAll(".filter input");
@@ -41,6 +42,6 @@ checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("click", (e) => {
         let cat = e.target.id;
         let productsInCat = document.querySelectorAll(`.cat-${cat}`);
-        productsInCat.forEach(product => product.classList.toggle("d-none"));
+        productsInCat.forEach(product => product.classList.toggle("ocult-filtered"));
     });
 });
