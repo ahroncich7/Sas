@@ -26,26 +26,6 @@ body {
 
 .card-img{
     text-align: center;
-    width: 250px;
-
-}
-
-.card-img img{
-    width: 100%;
-}
-
-.product-card-desc{
-    letter-spacing: 2px;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    text-align: center;
-}
-
-
-
-
-.card-img{
-    text-align: center;
     text-justify:auto;
     position: relative;
 }
@@ -61,6 +41,18 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease-out ;
 }
+
+.card-img img{
+    width: 100%;
+}
+
+.product-card-desc{
+    letter-spacing: 2px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
 
 .card-img a {
     color: var(--color2);
@@ -84,6 +76,10 @@ body {
 .card-img h3{
     letter-spacing: 6px;
     color: var(--color1);
+}
+
+.custom-card{
+    max-width: 250px;
 }
 
 
