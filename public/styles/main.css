@@ -34,6 +34,10 @@ a, a:visited {
     background-color: var(--color3 );
 }
 
+hr{
+    color: var(--color5);
+}
+
 
 /* BUTTONS */
 
