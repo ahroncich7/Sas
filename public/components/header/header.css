@@ -16,7 +16,7 @@ header .navbar{
 } 
 
 
-header .nav-link{
+header .nav-link, header .btn{
     color: var(--color1);
 }
 
