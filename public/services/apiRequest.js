@@ -7,3 +7,12 @@ export function getAllProducts() {
 
 }
 
+export function getCategories() {
+    let results = fetch("/listCategories", {
+
+    }).then((e) => e.json()).
+        catch(e => console.log(e));
+
+    return results;
+}
+

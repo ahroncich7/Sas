@@ -10,6 +10,7 @@
 
     --color1-50: #efefefde;
     --color2-50: #decbb779;
+    --overlay2: #8f857d80;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -57,6 +58,15 @@ hr{
     display: none!important;
 }
 
+/* CUSTOM CLASES */
+
+.minvh-50{
+    min-height: 50vh;
+}
+
+.vh-50{
+    height: 50vh;
+}
 
 /* ANIMATION */
 
