@@ -1,7 +1,16 @@
-main{
-    background-color: var(--color1);
+.carousel-block {
+    display: flex!important;
+    align-items: flex-end;
 }
 
-.sizes {
-    
+.size-large{
+    max-width: 80%;
+}
+
+.size-medium{
+    max-width: 60%;
+}
+
+.size-small{
+    max-width: 40%;
 }
