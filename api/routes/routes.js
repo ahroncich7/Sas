@@ -15,6 +15,8 @@ routes.get("/listByType", productController.listByType);
 
 routes.get("/listCategory", productController.getCategory);
 
+routes.get("/listCategories", productController.getCategories);
+
 routes.post("/insertProduct", productController.insertNewProduct);
 
 routes.delete("/deleteProduct", productController.deleteProduct);

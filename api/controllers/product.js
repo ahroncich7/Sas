@@ -34,6 +34,13 @@ const productsController = {
     },
 
 
+    getCategories: (req, res) => {
+        let responsePromise = products.selectCategories();
+        responsePromise.then((response) => res.status(200).send({ data: response }))
+            .catch(err => res.status(500).send({ message: err }));
+    },
+
+
     listProductsInStock: (req, res) => {
         let responsePromise = products.selectInStock();
         responsePromise.then((response) => res.status(200).send({ data: response }))
@@ -89,9 +96,9 @@ const productsController = {
         let id = req.body.id;
         let responsePromise = products.updateById(id, category, data);
         responsePromise.then((response) => res.status(200).send({ data: response }))
-            .catch(err => res.status(500).send({ message: err + "sssssssssssssssss"}));
+            .catch(err => res.status(500).send({ message: err + "sssssssssssssssss" }));
     }
-    
+
 };
 
 
