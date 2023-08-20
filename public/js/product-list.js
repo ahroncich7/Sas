@@ -18,7 +18,7 @@ productsPromise
                                         </div>
                                         <div class="product-card-desc">
                                                 
-                                            <h3 class="product-title">${product.titulo.toUpperCase()}</h3>
+                                            <h4 class="product-title">${product.titulo.toUpperCase()}</h4>
                                                 
                                             <span class="product-price">$${product.precio}</span>
                                             
