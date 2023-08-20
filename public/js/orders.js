@@ -6,6 +6,7 @@ let orderListEl = document.getElementById("order-list");
 
 getCategories().then((res)=>{
     categories = res.data;
+    categories = categories.filter(el=>el.nombre_cat != "Arte");
     orderListEl.innerHTML = "";
     let count = 0;
     categories.forEach(category => {

@@ -3,6 +3,10 @@
     align-items: flex-end;
 }
 
+section.hero{
+    background-position: bottom;
+}
+
 .size-large{
     max-width: 80%;
 }

@@ -1,4 +1,48 @@
-.about-intro {
-    min-height: 80vh;
+.about-section {
     background-color: var(--color2);
+}
+
+.about-section h2 {
+    letter-spacing: inherit;
+    font-size: 42px;
+
+}
+
+.about-section * {
+    font-family: var(--font2);
+}
+
+.about-section .about-text {
+    max-width: 600px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.about-section.text3 {
+    background-color: var(--color6);
+    padding: 10vw;
+}
+
+.about-section.text3 .container {
+    background-color: var(--color5);
+    max-width: 600px;
+    color: var(--color1);
+    font-size: 22px;
+}
+
+.about-section.text3 p {
+    color: var(--color1);
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    strong {
+        font-size: 30px;
+    }
+
+    .about-title-cont {
+        text-align: center;
+    }
 }

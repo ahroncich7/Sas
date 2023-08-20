@@ -17,7 +17,7 @@ body {
 .products-list {
     flex: 1 1 auto;
     min-width: 300px;
-    max-height: 100vh;
+    max-height: 125vh;
     overflow-y: scroll;
 }
 
@@ -87,8 +87,8 @@ body {
 /* FILTER */
 
 .form-check-input:checked {
-    background-color: var(--color3);
-    border-color: var(--color3);
+    background-color: var(--color7);
+    border-color: var(--color7);
 }
 
 
