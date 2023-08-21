@@ -1,9 +1,15 @@
 .gastronomy-section .gastronomy-text {
     max-width: 600px;
-    /* font-weight: bold;
-    font-style: italic; */
 }
 
 .gastronomy-section {
     background-color: var(--color1);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .gastronomy-section .gastronomy-img img {
+        width: 100vw!important;
+    }
 }
