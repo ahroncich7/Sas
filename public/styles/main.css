@@ -53,6 +53,13 @@ hr {
     color: var(--color5);
 }
 
+.white-bg {
+    background-color: var(--color1);
+}
+
+.color-4{
+    color: var(--color4);
+}
 
 /* BUTTONS */
 
