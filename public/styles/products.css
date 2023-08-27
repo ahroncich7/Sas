@@ -24,29 +24,29 @@ body {
 
 /* CARDS */
 
-.card-img{
+.card-img {
     text-align: center;
-    text-justify:auto;
+    text-justify: auto;
     position: relative;
 }
 
-.card-img::after{
+.card-img::after {
     content: "";
-    background-color: var(--color4) ;
+    background-color: var(--color4);
     z-index: 1;
     position: absolute;
     left: 0;
     width: 250px;
     height: 250px;
     opacity: 0;
-    transition: opacity 0.3s ease-out ;
+    transition: opacity 0.3s ease-out;
 }
 
-.card-img img{
+.card-img img {
     width: 100%;
 }
 
-.product-card-desc{
+.product-card-desc {
     letter-spacing: 2px;
     margin-top: 1em;
     margin-bottom: 2em;
@@ -65,20 +65,22 @@ body {
 }
 
 
-.card-img:hover::after, .card-img:active::after{
+.card-img:hover::after,
+.card-img:active::after {
     opacity: 0.8;
 }
 
-.card-img:hover>a, .card-img:active>a{
+.card-img:hover>a,
+.card-img:active>a {
     opacity: 1;
 }
 
-.card-img h3{
+.card-img h3 {
     letter-spacing: 6px;
     color: var(--color1);
 }
 
-.custom-card{
+.custom-card {
     max-width: 250px;
 }
 
@@ -87,8 +89,31 @@ body {
 /* FILTER */
 
 .form-check-input:checked {
-    background-color: var(--color7);
-    border-color: var(--color7);
+    background-color: var(--color2);
+    border-color: var(--color2);
+}
+
+.form-check-input:focus {
+    border-color: transparent !important;
+}
+
+.form-switch .form-check-input:focus {
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+    box-shadow: none;
+}
+
+li {
+    color: var(--color4);
+    list-style: none;
+}
+
+li:hover {
+    margin-left: 1em;
+    scale: 1.2;
+}
+
+.selected-li-filter {
+    font-weight: 700;
 }
 
 

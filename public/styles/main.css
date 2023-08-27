@@ -57,7 +57,7 @@ hr {
     background-color: var(--color1);
 }
 
-.color-4{
+.color-4 {
     color: var(--color4);
 }
 
@@ -75,8 +75,8 @@ hr {
 .search-input {
     border-radius: 10px;
     padding-left: 1em;
-    box-shadow: 0 0 3px var(--color7);
     max-width: 80%;
+    border: none;
 
 }
 
@@ -87,7 +87,7 @@ hr {
 
 .search-input:focus-visible {
 
-    outline: var(--color7) auto 1px;
+    outline: none;
 }
 
 input::-ms-clear {
