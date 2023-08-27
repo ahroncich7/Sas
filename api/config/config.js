@@ -11,10 +11,10 @@ const ADMIN_PASS = process.env.ADMIN_PASS;
 
 module.exports = {
     PORT,
-    DB_HOST, 
+    DB_HOST,
     DB_USER,
     DB_DATABASE,
-    DB_PASSWORD, 
+    DB_PASSWORD,
     DB_PORT,
     ADMIN_PASS
 };
