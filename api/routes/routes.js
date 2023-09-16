@@ -27,6 +27,8 @@ routes.get("/listInStock", productController.listProductsInStock);
 
 routes.put("/updateProduct", productController.updateProduct);
 
+routes.put("/updatePrices", productController.updatePrices);
+
 // routes.get("/listFilteredProducts", );
 
 module.exports = routes;

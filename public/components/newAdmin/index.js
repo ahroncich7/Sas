@@ -1,4 +1,4 @@
-import { deleteProductInDb, getAllProducts, insertDataInDB, updateDataInDB } from "../../services/apiRequest.js";
+import { deleteProductInDb, getAllProducts, insertDataInDB, updateDataInDB, updateMasivePrices } from "../../services/apiRequest.js";
 import { failAlert, succesAlert } from "../../services/alerts.js";
 
 async function run() {
@@ -72,7 +72,38 @@ async function run() {
 
         self.search = (value) => {
             self.filteredRows = self.rows.filter(row => row.titulo.toLowerCase().includes(value.toLowerCase()) ||
-                row.prod_id.toString().includes(value));
+                row.prod_id.toString().includes(value) ||
+                row.nombre_cat.toLowerCase().includes(value.toLowerCase()));
+        };
+
+
+        self.selectAll = () => {
+            self.filteredRows.forEach((row) => {
+                row.selected = !row.selected;
+            });
+        };
+
+        self.changePrice = (price) => {
+            let ids = [];
+            self.filteredRows.forEach((row) => {
+                if (row.selected) {
+                    ids.push(row.prod_id);
+                }
+            });
+
+            let priceMultiplier;
+            if (price >= 0) {
+                priceMultiplier = 1 + (Math.abs(price) / 100);
+            } else {
+                priceMultiplier = 1 - (Math.abs(price) / 100);
+            }
+
+
+            updateMasivePrices(ids, priceMultiplier).then((result) => {
+                succesAlert("Se actualizaron los precios existosamente");
+                self.updateList();
+            }).catch((err) => { console.log(err); });
+
         };
 
         self.rows = [];

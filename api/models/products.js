@@ -74,6 +74,13 @@ class products {
 
         return this.db.query(query);
     }
+
+    updatePrices(data) {
+        let query = `UPDATE productos
+        SET precio = precio * ${data.priceMultiplier}
+        WHERE prod_id IN (${data.ids});`;
+        return this.db.query(query);
+    }
 }
 
 module.exports = products;

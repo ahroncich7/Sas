@@ -97,7 +97,20 @@ const productsController = {
         let responsePromise = products.updateById(id, category, data);
         responsePromise.then((response) => res.status(200).send({ data: response }))
             .catch(err => res.status(500).send({ message: err + "sssssssssssssssss" }));
+    },
+
+    updatePrices: (req, res) => {
+        if (!req.body) {
+            res.status(400).send({ message: "Error en los datos del formulario" });
+        }
+
+        let data = req.body;
+
+        let responsePromise = products.updatePrices(data);
+        responsePromise.then((response) => res.status(200).send({ data: response }))
+            .catch(err => res.status(500).send({ message: err + "sssssssssssssssss" }));
     }
+
 
 };
 

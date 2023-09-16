@@ -52,7 +52,19 @@ export function updateDataInDB(dataObject) {
 }
 
 
+export function updateMasivePrices(ids, priceMultiplier) {
+    const results = fetch(BASE + "/updatePrices", {
 
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        method: "PUT",
+        body: JSON.stringify({ ids: ids, priceMultiplier: priceMultiplier })
+    });
+
+    return results;
+}
 
 
 
