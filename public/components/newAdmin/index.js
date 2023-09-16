@@ -2,7 +2,7 @@ import { deleteProductInDb, getAllProducts, insertDataInDB, updateDataInDB, upda
 import { failAlert, succesAlert } from "../../services/alerts.js";
 
 async function run() {
-    const template = await fetch("productlist.html");
+    const template = await fetch("/components/newAdmin/productlist.html");
     const content = await template.text();
     // document.querySelector("#root").innerHTML = content;
 
