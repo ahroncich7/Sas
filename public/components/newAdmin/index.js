@@ -1,3 +1,6 @@
+import { deleteProductInDb, getAllProducts, insertDataInDB, updateDataInDB } from "../../services/apiRequest.js";
+import { failAlert, succesAlert } from "../../services/alerts.js";
+
 async function run() {
     const template = await fetch("productlist.html");
     const content = await template.text();
@@ -16,16 +19,55 @@ async function run() {
             }
         };
 
-        self.save = () => {
+        self.save = (value) => {
 
+            let data = {
+                category: self.selectedProduct.nombre_cat,
+                id: self.selectedProduct.prod_id || "-",
+                img_url: self.selectedProduct.img,
+                price: self.selectedProduct.precio,
+                title: self.selectedProduct.titulo,
+                stock: self.selectedProduct.stock
+            };
+
+            if (!self.validateForm(data)) {
+                failAlert("Complete todos los campos");
+                return;
+            }
+
+            let apiPromise = data.id != "-" ? updateDataInDB(data) : insertDataInDB(data);
+
+            apiPromise
+                .then(() => {
+                    succesAlert("Elemento modificado en DB"),
+                        self.updateList(),
+                        self.selectedProduct.titulo = "";
+                    self.selectedProduct.nombre_cat = "";
+                    self.selectedProduct.prod_id = "";
+                    self.selectedProduct.img = "";
+                    self.selectedProduct.precio = "";
+                    self.selectedProduct.stock = "";
+
+                })
+                .catch(() => failAlert("Hubo un problema"));
         };
 
         self.edit = (product) => {
             Object.assign(self.selectedProduct, product);
+            window.scrollTo(0, 0);
+            succesAlert("Datos cargados en formulario");
+        };
+
+        self.delete = (id) => {
+            let deletePromise = deleteProductInDb(id);
+            deletePromise
+                .then(() => { succesAlert("Producto eliminado"), self.updateList(); })
+                .catch(e => failAlert(e));
         };
 
         self.selectedProduct = {
-            nombre_cat: ""
+            nombre_cat: "",
+            prod_id: "-"
         };
 
         self.search = (value) => {
@@ -33,172 +75,40 @@ async function run() {
                 row.prod_id.toString().includes(value));
         };
 
-        self.rows = [
-            {
-                "titulo": "Pocillo sin Asa",
-                "precio": 1000,
-                "img": "https://i.ibb.co/hW7hnyr/IMG-20220925-123135862.jpg",
-                "stock": 0,
-                "prod_id": 1,
-                "cat_id2": 1,
-                "cat_id": 1,
-                "nombre_cat": "Tazas",
-                "small_price": 1400,
-                "small_cap": "100",
-                "size_img": "https://i.ibb.co/ZhQP7Wc/tazas.png",
-                "medium_price": 2000,
-                "medium_cap": "220",
-                "large_price": 2800,
-                "large_cap": "300",
-                "U_M": "ml"
-            },
-            {
-                "titulo": "Taza Pincelada Azul Claro",
-                "precio": 1600,
-                "img": "https://i.ibb.co/vXCkt20/IMG-20220925-122804134.jpg",
-                "stock": 0,
-                "prod_id": 3,
-                "cat_id2": 1,
-                "cat_id": 1,
-                "nombre_cat": "Tazas",
-                "small_price": 1400,
-                "small_cap": "100",
-                "size_img": "https://i.ibb.co/ZhQP7Wc/tazas.png",
-                "medium_price": 2000,
-                "medium_cap": "220",
-                "large_price": 2800,
-                "large_cap": "300",
-                "U_M": "ml"
-            },
-            {
-                "titulo": "Taza 280 ml",
-                "precio": 1950,
-                "img": "https://i.ibb.co/9gwJhrQ/Im-genes-Sas.jpg",
-                "stock": 1,
-                "prod_id": 55,
-                "cat_id2": 1,
-                "cat_id": 1,
-                "nombre_cat": "Tazas",
-                "small_price": 1400,
-                "small_cap": "100",
-                "size_img": "https://i.ibb.co/ZhQP7Wc/tazas.png",
-                "medium_price": 2000,
-                "medium_cap": "220",
-                "large_price": 2800,
-                "large_cap": "300",
-                "U_M": "ml"
-            },
-            {
-                "titulo": "Tazas 220ml",
-                "precio": 3100,
-                "img": "https://i.ibb.co/2FcgSWN/Tazas-220.png",
-                "stock": 1,
-                "prod_id": 61,
-                "cat_id2": 1,
-                "cat_id": 1,
-                "nombre_cat": "Tazas",
-                "small_price": 1400,
-                "small_cap": "100",
-                "size_img": "https://i.ibb.co/ZhQP7Wc/tazas.png",
-                "medium_price": 2000,
-                "medium_cap": "220",
-                "large_price": 2800,
-                "large_cap": "300",
-                "U_M": "ml"
-            },
-            {
-                "titulo": "Taza natural 300ml",
-                "precio": 2050,
-                "img": "https://i.ibb.co/wrTdKw5/taza-natural300ml.jpg",
-                "stock": 0,
-                "prod_id": 79,
-                "cat_id2": 1,
-                "cat_id": 1,
-                "nombre_cat": "Tazas",
-                "small_price": 1400,
-                "small_cap": "100",
-                "size_img": "https://i.ibb.co/ZhQP7Wc/tazas.png",
-                "medium_price": 2000,
-                "medium_cap": "220",
-                "large_price": 2800,
-                "large_cap": "300",
-                "U_M": "ml"
-            },
-            {
-                "titulo": "Pocillos oscuros",
-                "precio": 1190,
-                "img": "https://i.ibb.co/wgLMjFX/pocillomarron.png",
-                "stock": 0,
-                "prod_id": 93,
-                "cat_id2": 1,
-                "cat_id": 1,
-                "nombre_cat": "Tazas",
-                "small_price": 1400,
-                "small_cap": "100",
-                "size_img": "https://i.ibb.co/ZhQP7Wc/tazas.png",
-                "medium_price": 2000,
-                "medium_cap": "220",
-                "large_price": 2800,
-                "large_cap": "300",
-                "U_M": "ml"
-            },
-            {
-                "titulo": "Taza sin asa 220ml",
-                "precio": 1500,
-                "img": "https://i.ibb.co/dcKyY6c/tazassinasa.png",
-                "stock": 0,
-                "prod_id": 94,
-                "cat_id2": 1,
-                "cat_id": 1,
-                "nombre_cat": "Tazas",
-                "small_price": 1400,
-                "small_cap": "100",
-                "size_img": "https://i.ibb.co/ZhQP7Wc/tazas.png",
-                "medium_price": 2000,
-                "medium_cap": "220",
-                "large_price": 2800,
-                "large_cap": "300",
-                "U_M": "ml"
-            },
-            {
-                "titulo": "Bowl Mediano",
-                "precio": 3900,
-                "img": "https://i.ibb.co/fpk2xGN/bowl-mediano.png",
-                "stock": 0,
-                "prod_id": 51,
-                "cat_id2": 2,
-                "cat_id": 2,
-                "nombre_cat": "Bowls",
-                "small_price": 3700,
-                "small_cap": "400",
-                "size_img": "https://i.ibb.co/pKRXFhj/cuencos.png",
-                "medium_price": 4800,
-                "medium_cap": "680",
-                "large_price": 5300,
-                "large_cap": "950",
-                "U_M": "ml"
-            },
-            {
-                "titulo": "Bowl Chico",
-                "precio": 3700,
-                "img": "https://i.ibb.co/0tZj30q/Bowl-Chico.jpg",
-                "stock": 1,
-                "prod_id": 52,
-                "cat_id2": 2,
-                "cat_id": 2,
-                "nombre_cat": "Bowls",
-                "small_price": 3700,
-                "small_cap": "400",
-                "size_img": "https://i.ibb.co/pKRXFhj/cuencos.png",
-                "medium_price": 4800,
-                "medium_cap": "680",
-                "large_price": 5300,
-                "large_cap": "950",
-                "U_M": "ml"
-            }
-        ];
+        self.rows = [];
 
-        self.filteredRows = self.rows;
+        self.updateList = () => {
+
+            let apiPromise = getAllProducts();
+
+            apiPromise
+                .then((response => {
+                    self.rows = [];
+                    response.data.forEach((productData) => {
+                        self.rows.push(productData);
+                        self.filteredRows = self.rows;
+
+                    });
+                    window.scrollTo(0, 0);
+                }))
+                .catch(err =>
+                    failAlert(err)
+                );
+        };
+
+        self.updateList();
+
+        self.validateForm = (data) => {
+            let form_is_valid = true;
+            // Object.values(data).forEach((e) => {
+            //     if (!e) {
+            //         form_is_valid = false;
+            //     }
+            // });
+            return form_is_valid;
+        };
+
+
         // Component template
         return content;
     }

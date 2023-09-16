@@ -25,7 +25,8 @@
 
                 <div>
                     <label for="id">id:</label>
-                    <input id="id" name="id" value="-" style="width: 50px" :bind="self.selectedProduct.prod_id" readonly>
+                    <input id="id" name="id" value="-" style="width: 50px" :bind="self.selectedProduct.prod_id"
+                        readonly>
                 </div>
 
                 <div>
@@ -52,7 +53,7 @@
                 <input type="text" name="img_url" class="form-control" id="img_url" placeholder="Nombre de la imagen"
                     required :bind="self.selectedProduct.img">
             </div>
-            <input class="btn btn-success" id="submit-btn" type="submit" value="Guardar" onclick="self.save()">
+            <input class="btn btn-success" id="submit-btn" type="button" value="Guardar" onclick="self.save(this)">
         </form>
 
 
@@ -67,7 +68,8 @@
 
 
         <div class="d-flex flex-row gap-2">
-            <input id="search" class="search-input" type="search" placeholder="Buscar..." oninput="self.search(this.value)">
+            <input id="search" class="search-input" type="search" placeholder="Buscar..."
+                oninput="self.search(this.value)">
         </div>
 
         <div id="products" class="products my-3">
@@ -90,7 +92,8 @@
                         <div class="col-2 flex-column d-flex gap-1 justify-content-center" style="min-height:100px">
                             <button id="edit-{{self.prod_id}}" class="btn btn-success"
                                 onclick="self.parent.edit(self)">Editar</button>
-                            <button id="delete-{{self.prod_id}}" class="btn btn-danger">Eliminar</button>
+                            <button id="delete-{{self.prod_id}}" class="btn btn-danger"
+                                onclick="self.parent.delete(self.prod_id)">Eliminar</button>
                         </div>
                     </div>
                 </div>
