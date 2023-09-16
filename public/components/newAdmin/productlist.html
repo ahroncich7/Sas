@@ -1,0 +1,100 @@
+<>
+    <div class="container mt-5">
+
+
+
+
+        <form id="admin_form" action="">
+            <div class="mb-3 justify-content-between d-flex">
+                <div>
+                    <label for="product_id">Categoría:</label>
+                    <select id="category" name="category" required :bind="self.selectedProduct.nombre_cat">
+
+                        <option name="Tazas" value="Tazas">Tazas</option>
+                        <option name="Platos" value="Platos">Platos</option>
+                        <option name="Bowls" value="Bowls">Bowls</option>
+                        <option name="Bandejas" value="Bandejas">Bandejas</option>
+                        <option name="Ensaladeras" value="Ensaladeras">Ensaladeras</option>
+                        <option name="Floreros" value="Floreros">Floreros</option>
+                        <option name="Teteras" value="Teteras">Teteras</option>
+                        <option name="Cuencos" value="Cuencos">Cuencos</option>
+                        <option name="Arte" value="Arte">Arte</option>
+                        <!-- </datalist> -->
+                    </select>
+                </div>
+
+                <div>
+                    <label for="id">id:</label>
+                    <input id="id" name="id" value="-" style="width: 50px" :bind="self.selectedProduct.prod_id" readonly>
+                </div>
+
+                <div>
+                    <label class="form-check-label" for="stock">
+                        EN STOCK
+                    </label>
+                    <input id="stock" name="stock" class="form-check-input" type="checkbox" checked
+                        id="flexCheckDefault" :bind="self.selectedProduct.stock">
+                </div>
+            </div>
+
+            <div class=" mb-3">
+                <label for="title" class="form-label">Título</label>
+                <input type="text" name="title" class="form-control" id="title" placeholder="Título del producto"
+                    required :bind="self.selectedProduct.titulo">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Precio</label>
+                <input type="number" name="price" class="form-control" id="price" placeholder="Precio del producto"
+                    required :bind="self.selectedProduct.precio">
+            </div>
+            <div class="mb-3">
+                <label for="img_url" class="form-label">URL imagen</label>
+                <input type="text" name="img_url" class="form-control" id="img_url" placeholder="Nombre de la imagen"
+                    required :bind="self.selectedProduct.img">
+            </div>
+            <input class="btn btn-success" id="submit-btn" type="submit" value="Guardar" onclick="self.save()">
+        </form>
+
+
+        <br>
+
+        <div id="fail-alert" class="text-center alert alert-danger d-none" role="alert">
+            Producto Eliminado
+        </div>
+        <div id="succes-alert" class="text-center alert alert-success d-none" role="alert">
+            Producto Guardado
+        </div>
+
+
+        <div class="d-flex flex-row gap-2">
+            <input id="search" class="search-input" type="search" placeholder="Buscar..." oninput="self.search(this.value)">
+        </div>
+
+        <div id="products" class="products my-3">
+            <div :loop="self.filteredRows">
+                <div>
+                    <div class="row p-2 my-2" :ref="self.container" :ready="self.parent.setStyle(self)">
+                        <div class="col-2  text-center" style="min-height:100px">
+                            <img :src="self.img" alt="" class="img-thumbnail" style="height:100px">
+                        </div>
+
+                        <div class="col d-flex flex-row gap-5 justify-content-center align-items-center"
+                            style="min-height:100px">
+                            <p> Nombre: {{self.titulo}}</p>
+                            <p>Precio: ${{self.precio}}</p>
+                            <p>Categoria: {{self.nombre_cat}}</p>
+                            <p>En Stock: {{self.stock ? 'Si':'No'}}</p>
+                            <p>ID:{{self.prod_id}}</p>
+                        </div>
+
+                        <div class="col-2 flex-column d-flex gap-1 justify-content-center" style="min-height:100px">
+                            <button id="edit-{{self.prod_id}}" class="btn btn-success"
+                                onclick="self.parent.edit(self)">Editar</button>
+                            <button id="delete-{{self.prod_id}}" class="btn btn-danger">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</>

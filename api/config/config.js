@@ -6,7 +6,7 @@ const DB_USER = process.env.DB_USER || "u02ffgz5temaryfh";
 const DB_DATABASE = process.env.DB_DATABASE || "bxdraymchrkn0xyjbvgs";
 const DB_PASSWORD = process.env.DB_PASSWORD || "03pZkHz2WCnVzrdf9iD2";
 const DB_PORT = process.env.DB_PORT || 3306;
-const ADMIN_PASS = process.env.ADMIN_PASS;
+const ADMIN_PASS = process.env.ADMIN_PASS || 1234;
 
 
 module.exports = {
