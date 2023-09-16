@@ -1,4 +1,4 @@
-.footer{
+.footer {
     font-size: 12px;
     background-color: var(--color5);
 }
@@ -7,11 +7,16 @@
     flex: 1 1 auto;
 }
 
-.footer *{
+.footer * {
     color: var(--color1);
 }
 
-.footer .title{
+.footer .form input,
+.footer .form textarea {
+    color: var(--color5);
+}
+
+.footer .title {
     border-bottom: var(--color1) solid 2px;
     display: inline-block;
 }
@@ -37,7 +42,7 @@
 
 @media screen and (min-width: 768px) {
 
-    .map img{
+    .map img {
         max-width: 200px;
     }
 
