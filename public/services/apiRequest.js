@@ -67,15 +67,12 @@ export function updateMasivePrices(ids, priceMultiplier) {
 }
 
 
+export function getCategories() {
+    let results = fetch("/listCategories", {
 
+    }).then((e) => e.json()).
+        catch(e => console.log(e));
 
-
-// export function getCategories() {
-//     let results = fetch("/listCategories", {
-
-//     }).then((e) => e.json()).
-//         catch(e => console.log(e));
-
-//     return results;
-// }
+    return results;
+}
 
