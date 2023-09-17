@@ -6,43 +6,56 @@ header {
     position: absolute;
 }
 
-header .menu{
+header .menu {
     max-width: 660px;
-    transition: 0.5s ;
+    transition: 0.5s;
 }
 
-header .navbar{
+header .navbar {
     justify-content: space-around;
-} 
+}
 
 
-header .nav-link, header .nav-link *, header .dropdown *, header .btn{
+header .nav-link,
+header .nav-link *,
+header .dropdown *,
+header .btn {
     color: var(--color1);
 }
 
 
-header .nav-link:hover, header .nav-link:focus, header .btn:focus, header .btn:hover, header .nav-link span:hover, header .nav-link span:focus {
+header .nav-link:hover,
+header .nav-link:focus,
+header .btn:focus,
+header .btn:hover,
+header .nav-link span:hover,
+header .nav-link span:focus {
     color: var(--color2);
 }
 
-header .dropdown-menu, header .btn{
+header .dropdown-menu,
+header .btn {
     background-color: transparent !important;
     border: none !important;
 }
 
-header .dropdown-item{
+header .dropdown-item {
     color: var(--color1);
     transition: margin-left 0.25s;
 }
 
-header .dropdown-item:hover{
+header .dropdown-item:hover {
     margin-left: 1em;
     transition: margin-left 1s;
 }
 
-@media screen and (max-width: 992px ) {
-    
-    header .menu{
+header .dropdown-item:active {
+    background-color: var(--color3);
+}
+
+@media screen and (max-width: 992px) {
+
+    header .menu {
         background-color: var(--color1-50);
     }
 
@@ -50,7 +63,10 @@ header .dropdown-item:hover{
         color: var(--color5);
     }
 
-    header .nav-link:hover, header .nav-link:focus, header .btn:focus, header .btn:hover{
+    header .nav-link:hover,
+    header .nav-link:focus,
+    header .btn:focus,
+    header .btn:hover {
         color: var(--color6);
     }
 }
