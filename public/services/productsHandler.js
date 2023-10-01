@@ -9,7 +9,7 @@ export async function getProducts() {
         //Intenta encontrar los productos en local storage
         let products = getProductFromLocalStorage();
         //Verifica si los datos son muy viejos
-        if (new Date() - products.date > EXP) {
+        if (new Date() - new Date(products.date) > EXP) {
             console.log("Local Storage data has expired");
             throw Error;
         }
@@ -21,7 +21,7 @@ export async function getProducts() {
         let products = await getProductsFromApi();
 
         //Guarda productos en local storage
-        saveProductsInLocalStorege(products);
+        saveProductsInLocalStorage(products);
         console.log("data obtained from API");
         return products;
     }
@@ -40,8 +40,8 @@ function getProductsFromApi() {
 }
 
 
-function saveProductsInLocalStorege(products) {
-    const date = new Date();
+function saveProductsInLocalStorage(products) {
+    let date = new Date();
     const dataObject = { date: date, data: products };
     localStorage.setItem("products", JSON.stringify(dataObject));
 }
