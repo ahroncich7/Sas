@@ -16,3 +16,7 @@ async function chargeProducts() {
 }
 
 chargeProducts();
+
+document.getElementById("promo-button").addEventListener("click", (oEvent) => {
+    oEvent.target.parentElement.parentElement.parentElement.classList.add("ocult");
+});

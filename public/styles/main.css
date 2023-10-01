@@ -94,6 +94,15 @@ input::-ms-clear {
     color: #2a7e00;
 }
 
+
+.custom-promo{
+    width: fit-content!important;
+    position: fixed;
+    top: 150px;
+    left: 1rem;
+    z-index: 15;
+    opacity: 0.9;
+}
 /* HIDDENS */
 
 .ocult-no-stock {
