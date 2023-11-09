@@ -5,3 +5,14 @@
 .events-section .img-grid .col {
     padding: 0;
 }
+
+.hero h1 {
+    font-size: 2rem!important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .img-fluid{
+        width: 100%!important;
+    }
+}
