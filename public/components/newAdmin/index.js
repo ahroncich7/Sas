@@ -39,9 +39,9 @@ async function run() {
 
             apiPromise
                 .then(() => {
-                    succesAlert("Elemento modificado en DB"),
-                        self.updateList(),
-                        self.selectedProduct.titulo = "";
+                    succesAlert("Elemento modificado en DB");
+                    self.updateList();
+                    self.selectedProduct.titulo = "";
                     self.selectedProduct.nombre_cat = "";
                     self.selectedProduct.prod_id = "";
                     self.selectedProduct.img = "";
